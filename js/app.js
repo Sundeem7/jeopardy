@@ -17,8 +17,14 @@ let questionsCat1 = {
 };
 
 function clickQuestion() {
+let questionsD = document.querySelectorAll(".questionDisplay");
 
-   document.getElementById().addEventListener("click", ) 
+   document.querySelectorAll(".points").addEventListener("click", event)
+    if (questionsDisplay.style.display === "none") {
+        questionsDisplay.style.display === "block";
+    } else {
+        questionsDisplay.style.display === "none";
+    }
 }
 
 
