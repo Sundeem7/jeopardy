@@ -1,0 +1,41 @@
+.headerContainer {
+    border: solid black;
+    height: 100px;
+}
+
+.categoriesContainer {
+    border: solid brown;
+    display: flex;
+
+}
+
+.oneHContainer {
+    border: solid red;
+    display: flex;
+}
+
+.twoHContainer {
+    border: solid orange;
+    display: flex;
+}
+
+.threeHContainer {
+    border: solid green;
+    display: flex;
+}
+
+.fourHContainer {
+    border: solid blue;
+    display: flex;
+}
+
+.fiveHContainer {
+    border: solid purple;
+    display: flex;
+}
+
+.points {
+    border: solid pink;
+    height: 100px;
+    width: 100px;
+}
