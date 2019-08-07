@@ -6,7 +6,24 @@
 .categoriesContainer {
     border: solid brown;
     display: flex;
+}
+.containers {
+    display: flex;
+}
 
+.bigContainer {
+    border: dotted black;
+    position: absolute;
+    
+}
+
+.questionDisplay {
+    border: solid yellow;
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    background-color: yellow;
+    z-index: 1;
 }
 
 .categories {
@@ -17,27 +34,22 @@
 
 .oneHContainer {
     border: solid red;
-    display: flex;
 }
 
 .twoHContainer {
     border: solid orange;
-    display: flex;
 }
 
 .threeHContainer {
     border: solid green;
-    display: flex;
 }
 
 .fourHContainer {
     border: solid blue;
-    display: flex;
 }
 
 .fiveHContainer {
     border: solid purple;
-    display: flex;
 }
 
 .points {

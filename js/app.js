@@ -20,10 +20,10 @@ function clickQuestion() {
 let questionsD = document.querySelectorAll(".questionDisplay");
 
    document.querySelectorAll(".points").addEventListener("click", event)
-    if (questionsDisplay.style.display === "none") {
-        questionsDisplay.style.display === "block";
+    if (questionDisplay.style.display === "none") {
+        questionDisplay.style.display === "block";
     } else {
-        questionsDisplay.style.display === "none";
+        questionDisplay.style.display === "none";
     }
 }
 
