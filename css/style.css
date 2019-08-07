@@ -24,6 +24,7 @@
     position: absolute;
     background-color: yellow;
     z-index: 1;
+    display: none;
 }
 
 .categories {
