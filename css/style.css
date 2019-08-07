@@ -3,6 +3,12 @@
     height: 100px;
 }
 
+.timer {
+    height: 100px;
+    width: 100px;
+    border: solid green;
+}
+
 .categoriesContainer {
     border: solid brown;
     display: flex;
@@ -13,8 +19,7 @@
 
 .bigContainer {
     border: dotted black;
-    position: absolute;
-    
+    position: absolute;    
 }
 
 .questionDisplay {
@@ -33,7 +38,7 @@
     width: 100px;
 }
 
-.oneHContainer {
+/* .oneHContainer {
     border: solid red;
 }
 
@@ -51,7 +56,7 @@
 
 .fiveHContainer {
     border: solid purple;
-}
+} */
 
 .points {
     border: solid pink;

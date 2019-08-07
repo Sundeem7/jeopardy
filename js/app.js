@@ -4,17 +4,13 @@ console.log("working");
 // let points = document.querySelector(".points");
 
 // // timer
+function seconds() {
+    let timer = document.querySelector(".timer").innerHTML
 
-// //questions categories
-// let questionsCat1 = {
-//     question: "Harry Potter",
-//     answers: [
-//         ["Rick Riordian", false],
-//         ["Cassandra Clare", false],
-//         ["JK Rowling", true],
-//         ["Laurel Hamilton", false]
-//     ]
-// };
+    
+  }
+  setTimeout(seconds, 1000);
+
 
 // click .points(any square with a points value) to make question appear
 function clickQuestion() {
@@ -28,12 +24,26 @@ function clickQuestion() {
             let questionDisplay = document.querySelector(".questionDisplay");
             console.log(questionDisplay)
             // display on click
-            if (questionDisplay.style.display === "block") {
-                questionDisplay.style.display === "none";
-            // } else {
-            //     questionDisplay.style.display === "none";
+            if (questionDisplay.style.display = "none") {
+                questionDisplay.style.display = "block";
             }
         })
     }
 }
 clickQuestion()
+
+// function correctAnswer() {
+// let correctAnswer = 
+
+// }
+
+// //questions categories
+// let questionsCat1 = {
+//     question: "Harry Potter",
+//     answers: [
+//         ["Rick Riordian", false],
+//         ["Cassandra Clare", false],
+//         ["JK Rowling", true],
+//         ["Laurel Hamilton", false]
+//     ]
+// };
