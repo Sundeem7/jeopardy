@@ -17,36 +17,44 @@ function addPoints() {
 // ******************************************************************************
 
 // // timer
-let secs = 1
-let mins = 0
+let seconds = 1
+let minutes = 0
 let hours = 0
 
 function timeIncrement() {
     // increment timer function every second
     window.setTimeout(timeIncrement, 1000)
-    if (secs <= 59) {
+    if (seconds <= 59) {
         // display time in .timer (display clock in top right corner)
-        document.querySelector(".timer").innerHTML = hours + ":" + mins + ":" + secs;
-        console.log(hours + ":" + mins + ":" + secs)
-        secs++
-        // increment mins once time is above 59
-    } else if (secs = 59) {
-        mins++
+        document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + convertTimerDisplay(minutes) + ":" + convertTimerDisplay(seconds);
+        console.log(hours + ":" + minutes + ":" + seconds)
+        seconds++
+        // increment minutes once time is above 59
+    } else if (seconds = 59) {
+        minutes++
         // displays seconds as zero instead of 60
-        secs = 0;
-        document.querySelector(".timer").innerHTML = hours + ":" + mins + ":" + secs;
-        console.log(hours + ":" + mins + ":" + secs);
+        seconds = 0;
+        document.querySelector(".timer").innerHTML = hours + ":" + convertTimerDisplay(minutes) + ":" + seconds;
+        console.log(hours + ":" + minutes + ":" + seconds);
         // sets new value of seconds to 1 to begin incrementation again
-        secs = 1;
-    } else if (mins = 59) {
+        seconds = 1;
+    } else if (minutes = 59) {
         hours++
-        // displays mins as 0, instead of 60
-        mins = 0;
-        document.querySelector(".timer").innerHTML = hours + ":" + mins + ":" + secs;
-        console.log(hours + ":" + mins + ":" + secs)
+        // displays minutes as 0, instead of 60
+        minutes = 0;
+        document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + minutes + ":" + seconds;
+        console.log(hours + ":" + minutes + ":" + seconds)
     }
 }
 timeIncrement();
+
+function convertTimerDisplay(num) {
+    if (num <= 9) {
+        return ("0" + num);
+    } else {
+        return num;
+    }
+}
 
 
 
