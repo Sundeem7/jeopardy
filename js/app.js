@@ -48,6 +48,7 @@ function timeIncrement() {
 }
 timeIncrement();
 
+// add "0" infront of numbers <= 9
 function convertTimerDisplay(num) {
     if (num <= 9) {
         return ("0" + num);
