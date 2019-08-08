@@ -32,31 +32,28 @@
     display: none;
 }
 
+.question {
+    border: solid red;
+    height: 100px;
+    width: 400px;
+}
+
+.answersContainer {
+    border: solid orange;
+    display: flex;
+}
+
+.answers {
+    border: solid green;
+    height: 100px;
+    width: 100px;
+}
+
 .categories {
     border: solid gray;
     height: 100px;
     width: 100px;
 }
-
-/* .oneHContainer {
-    border: solid red;
-}
-
-.twoHContainer {
-    border: solid orange;
-}
-
-.threeHContainer {
-    border: solid green;
-}
-
-.fourHContainer {
-    border: solid blue;
-}
-
-.fiveHContainer {
-    border: solid purple;
-} */
 
 .points {
     border: solid pink;

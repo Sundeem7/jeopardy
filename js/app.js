@@ -1,5 +1,20 @@
 console.log("working");
+let points = 0;
 
+// correct question
+function addPoints() {
+    // add points to total points
+    let addTotalPoints = Number(document.querySelectorAll(".points").value);
+    // add points if answer is correct
+    totalPoints += addTotalPoints;
+    // add number from Parent node to total points
+    document.querySelectorAll(".points").parentNode.innerHTML = Number(totalPoints);
+    console.log(totalPoints)
+}
+
+
+
+// ******************************************************************************
 
 // // timer
 let secs = 1
