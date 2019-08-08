@@ -12,46 +12,7 @@ function addPoints() {
     console.log(totalPoints)
 }
 
-let answerBoxes = [question.answer1[0]]
 
-// Questions for Category 1
-let questionsCat1 = [
-    {
-        question: "Harry Potter",
-        answer1: ["Rick Riordian", false], 
-        answer2: ["Cassandra Clare", false],
-        answer3: ["JK Rowling", true],
-        answer4: ["Laurel Hamilton", false],
-    },
-    {
-        question: "Katniss Everdeen",
-        answer1: ["JK Rowling", false],
-        answer2: ["Suzanne Collins", true],
-        answer3: ["Cassandra Clare", false],
-        answer4: ["James Dashner", false]
-    },
-    {
-        question: "",
-        answer1: ["JK Rowling", ],
-        answer2: ["Suzanne Collins", ],
-        answer3: ["Cassandra Clare", ],
-        answer4: ["James Dashner", ]
-    },
-    {
-        question: "Thomas",
-        answer1: ["Veronica Roth", false],
-        answer2: ["Suzanne Collins", false],
-        answer3: ["Cassandra Clare", false],
-        answer4: ["James Dashner", true]
-    },
-    {
-        question: "",
-        answer1: ["JK Rowling", ],
-        answer2: ["Suzanne Collins", ],
-        answer3: ["Cassandra Clare", ],
-        answer4: ["James Dashner", ]
-    }
-]
 
 // ******************************************************************************
 

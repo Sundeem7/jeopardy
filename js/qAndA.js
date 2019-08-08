@@ -1,5 +1,6 @@
 console.log("working");
 
+// document.getElementById("")
 
 // Questions for Category 1
 let questionsCat1 = [
