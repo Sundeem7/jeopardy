@@ -1,58 +1,42 @@
 console.log("working");
 
-// // points
-// let points = document.querySelector(".points");
 
 // // timer
 let secs = 1
 let mins = 0
 let hours = 0
 
-// function timer() {
-//     // for (seconds = 0; seconds < 60; seconds++) {
-//     console.log(seconds)
-//     // }
-// }
-// setTimeout(timer, 1000);
-function timer() {
-    window.setTimeout(timer, 1000)
-if (secs <= 59) {
-    console.log(hours + ":" + mins + ":" + secs)
-    secs++
-} else if (secs = 59) {
-    mins++
-    secs = 0;
-    console.log(hours + ":" + mins + ":" + secs);
-    secs = 1;    
-} else if (mins = 59) {
-    hours++
-    mins = 0;
-    console.log(hours + ":" + mins + ":" + secs)
+function timeIncrement() {
+    // increment timer function every second
+    window.setTimeout(timeIncrement, 1000)
+    if (secs <= 59) {
+        // display time in .timer (display clock in top right corner)
+        document.querySelector(".timer").innerHTML = hours + ":" + mins + ":" + secs;
+        console.log(hours + ":" + mins + ":" + secs)
+        secs++
+        // increment mins once time is above 59
+    } else if (secs = 59) {
+        mins++
+        // displays seconds as zero instead of 60
+        secs = 0;
+        document.querySelector(".timer").innerHTML = hours + ":" + mins + ":" + secs;
+        console.log(hours + ":" + mins + ":" + secs);
+        // sets new value of seconds to 1 to begin incrementation again
+        secs = 1;
+    } else if (mins = 59) {
+        hours++
+        // displays mins as 0, instead of 60
+        mins = 0;
+        document.querySelector(".timer").innerHTML = hours + ":" + mins + ":" + secs;
+        console.log(hours + ":" + mins + ":" + secs)
+    }
 }
-}
-// } if (secs = 60) {
-//     console.log(mins)
-//     }
-//     mins++
-
-
-timer();
-
-// function hello() {
-//   console.log("Hello");
-//   window.setTimeout(hello, 5000);
-// }
-// hello();
-
-
-// for (seconds = 0; seconds < 60; seconds++) {
-//     timer(seconds)
-// console.log(seconds)
-// }
+timeIncrement();
 
 
 
-// click .points(any square with a points value) to make question appear
+// Question appear on click
+// click .points (any square with a points value) to make question appear
 function clickQuestion() {
     // declare .points
     let pointsQuestions = document.querySelectorAll(".points");
