@@ -4,15 +4,25 @@ let points = 0;
 // correct question
 function addPoints() {
     // add points to total points
-    let addTotalPoints = Number(document.querySelectorAll(".points").value);
+    let addTotalPoints = Number(document.querySelectorAll(".points").parentNode.value);
     // add points if answer is correct
     totalPoints += addTotalPoints;
     // add number from Parent node to total points
-    document.querySelectorAll(".points").parentNode.innerHTML = Number(totalPoints);
+    document.querySelectorAll(".points").innerHTML = Number(totalPoints);
     console.log(totalPoints)
 }
 
+// Questions for Category 1
+let questionsCat1 = [
+    {
+        question: "Harry Potter",
+        answer1: ["Rick Riordian", false], 
+        answer2: ["Cassandra Clare", false],
+        answer3: ["JK Rowling", true],
+        answer4: ["Laurel Hamilton", false],
+    }
 
+]
 
 // ******************************************************************************
 
@@ -79,19 +89,3 @@ function clickQuestion() {
     }
 }
 clickQuestion()
-
-// function correctAnswer() {
-// let correctAnswer = 
-
-// }
-
-// //questions categories
-// let questionsCat1 = {
-//     question: "Harry Potter",
-//     answers: [
-//         ["Rick Riordian", false],
-//         ["Cassandra Clare", false],
-//         ["JK Rowling", true],
-//         ["Laurel Hamilton", false]
-//     ]
-// };
