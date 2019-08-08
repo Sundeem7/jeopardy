@@ -1,24 +1,31 @@
 console.log("working");
 let points = 0;
 
-// correct question
-function addPoints() {
-    // add points to total points
-    let addTotalPoints = Number(document.querySelectorAll(".points").parentNode.value);
-    // add points if answer is correct
-    totalPoints += addTotalPoints;
-    // add number from Parent node to total points
-    document.querySelectorAll(".points").innerHTML = Number(totalPoints);
-    console.log(totalPoints)
-}
+// // correct question
+// function addPoints() {
+//     // add points to total points
+//     let addTotalPoints = Number(document.querySelectorAll(".points").parentNode.value);
+//     // add points if answer is correct
+//     totalPoints += addTotalPoints;
+//     // add number from Parent node to total points
+//     document.querySelectorAll(".points").innerHTML = Number(totalPoints);
+//     console.log(totalPoints)
+// }
 
 function questionSelect() {
-    let catPoints = document.querySelectorAll(".points");
-
-    catPoints
-console.log(catPoints);
-    
+    let qAndA = event.target.get(data-index);
+    questionsCat1[0].question(0);
+    document.querySelector()
 }
+    
+// console.log(catPoints);
+    
+// }
+  
+//   for (let [key, value] of Object.entries(questionsCat1[0])) {
+//     console.table(`${key}: ${value}`);
+
+//   }
 
 // ******************************************************************************
 
@@ -65,23 +72,23 @@ console.log(catPoints);
 
 
 
-// // Question appear on click
-// // click .points (any square with a points value) to make question appear
-// function clickQuestion() {
-//     // declare .points
-//     let pointsQuestions = document.querySelectorAll(".points");
-//     // create array for .points
-//     for (let i = 0; i < pointsQuestions.length; i++) {
-//         // add event listener to all .points
-//         pointsQuestions[i].addEventListener("click", (event) => {
-//             // declare .questionDisplay
-//             let questionDisplay = document.querySelector(".questionDisplay");
-//             console.log(questionDisplay)
-//             // display on click
-//             if (questionDisplay.style.display = "none") {
-//                 questionDisplay.style.display = "block";
-//             }
-//         })
-//     }
-// }
-// clickQuestion()
+// Question appear on click
+// click .points (any square with a points value) to make question appear
+function clickQuestion() {
+    // declare .points
+    let pointsQuestions = document.querySelectorAll(".points");
+    // create array for .points
+    for (let i = 0; i < pointsQuestions.length; i++) {
+        // add event listener to all .points
+        pointsQuestions[i].addEventListener("click", (event) => {
+            // declare .questionDisplay
+            let questionDisplay = document.querySelector(".questionDisplay");
+            console.log(questionDisplay)
+            // display on click
+            if (questionDisplay.style.display = "none") {
+                questionDisplay.style.display = "block";
+            }
+        })
+    }
+}
+clickQuestion()
