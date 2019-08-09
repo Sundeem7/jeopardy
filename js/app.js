@@ -79,50 +79,60 @@ let pointsAmount = 0;
 function clickQuestion() {
     // declare .points
     let pointsQuestions = document.querySelectorAll(".points");
-    
+
     // create array for .points
     for (let i = 0; i < pointsQuestions.length; i++) {
         // add event listener to all .points
         pointsQuestions[i].addEventListener("click", (event) => {
             // declare .questionDisplay
             let questionDisplay = document.querySelector(".questionDisplay");
+            // store point amount
             let pointsAmount = event.target.innerText;
-            
+
             // display on click
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
             }
+            // grabs object containing onject at the data-index
+let cQA = categoryQAndA[event.target.dataset.index];
+
             // uploads the correct question and answers in the box correlation when clicked
-            document.querySelector(".question").innerHTML = categoryQAndA[event.target.dataset.index].question;
-            document.querySelector(".answers1").innerHTML = categoryQAndA[event.target.dataset.index].answer1[0];
-            document.querySelector(".answers2").innerHTML = categoryQAndA[event.target.dataset.index].answer2[0];
-            document.querySelector(".answers3").innerHTML = categoryQAndA[event.target.dataset.index].answer3[0];
-            document.querySelector(".answers4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
-            checkAnswer(Number(pointsAmount));
+            document.querySelector(".question").innerHTML = cQA.question;
+            document.querySelector("#answer1").innerHTML = cQA.answer1[0];
+            document.querySelector("#answer2").innerHTML = cQA.answer2[0];
+            document.querySelector("#answer3").innerHTML = cQA.answer3[0];
+            document.querySelector("#answer4").innerHTML = cQA.answer4[0];
+            // use pointsAmount in function called checkAnswer
+            checkAnswer(Number(pointsAmount), cQA);
         })
-        
+
     }
 }
 clickQuestion();
 
+
+
 let totalPoints = 0;
 // check if answer is correct or incorrect
-function checkAnswer(pointsAmount) {
+function checkAnswer(pointsAmount, cQA) {
     //let pointsAmount = event.target.innerText;
     let answers = document.querySelectorAll(".answers");
 
     for (let i = 0; i < answers.length; i++) {
 
         answers[i].addEventListener("click", (event) => {
-console.log(answers[i]);
-        if (categoryQAndA[event.target.dataset.index].answer1[1] === true) {
-            console.log(categoryQAndA[event.target.dataset.index].answer1[1])
-            totalPoints += pointsAmount;
-            console.log(totalPoints)
-        } else {
-            totalPoints -= pointsAmount;
-            console.log(totalPoints)
-        }
+            // console.log(answers[i]);
+
+            // let answer = event.target.
+            // console.log(answer);
+            // if (answer === true)
+
+
+            // gets event target by ID
+            console.log(event.target.id);
+
+            let test = event.target.id
+            console.log(cQA[test][1])
         })
     }
 }
