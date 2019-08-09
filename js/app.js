@@ -93,19 +93,18 @@ function clickQuestion() {
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
             }
-            // grabs object containing onject at the data-index
-let cQA = categoryQAndA[event.target.dataset.index];
+            // grabs object containing onject at the data-index to use in function called checkAnswer
+            let cQA = categoryQAndA[event.target.dataset.index];
 
             // uploads the correct question and answers in the box correlation when clicked
-            document.querySelector(".question").innerHTML = cQA.question;
-            document.querySelector("#answer1").innerHTML = cQA.answer1[0];
-            document.querySelector("#answer2").innerHTML = cQA.answer2[0];
-            document.querySelector("#answer3").innerHTML = cQA.answer3[0];
-            document.querySelector("#answer4").innerHTML = cQA.answer4[0];
-            // use pointsAmount in function called checkAnswer
-            checkAnswer(Number(pointsAmount), cQA);
+            document.querySelector(".question").innerHTML = categoryQAndA[event.target.dataset.index].question;
+            document.querySelector("#answer1").innerHTML = categoryQAndA[event.target.dataset.index].answer1[0];
+            document.querySelector("#answer2").innerHTML = categoryQAndA[event.target.dataset.index].answer2[0];
+            document.querySelector("#answer3").innerHTML = categoryQAndA[event.target.dataset.index].answer3[0];
+            document.querySelector("#answer4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
+            // use pointsAmount, cQA, questionDisplay in function called checkAnswer
+            checkAnswer(Number(pointsAmount), cQA, questionDisplay);
         })
-
     }
 }
 clickQuestion();
@@ -114,25 +113,23 @@ clickQuestion();
 
 let totalPoints = 0;
 // check if answer is correct or incorrect
-function checkAnswer(pointsAmount, cQA) {
+function checkAnswer(pointsAmount, cQA, questionDisplay) {
     //let pointsAmount = event.target.innerText;
     let answers = document.querySelectorAll(".answers");
 
     for (let i = 0; i < answers.length; i++) {
 
         answers[i].addEventListener("click", (event) => {
-            // console.log(answers[i]);
-
-            // let answer = event.target.
-            // console.log(answer);
-            // if (answer === true)
-
-
-            // gets event target by ID
-            console.log(event.target.id);
-
-            let test = event.target.id
-            console.log(cQA[test][1])
+            // uses id of event  to grab second index of same array in object
+            if (cQA[event.target.id][1] === true) {
+                totalPoints += pointsAmount;
+                questionDisplay.style.display = "none"
+                console.log(totalPoints)
+            } else {
+                totalPoints -= pointsAmount;
+                console.log(totalPoints)
+                questionDisplay.style.display = "none"
+            }
         })
     }
 }
