@@ -73,37 +73,14 @@ function clickQuestion() {
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
             }
-            
-            // let questionIndex = event.target.dataset.index;
-            // let answer1Index = event.target.dataset.index;
-            // let answer2Index = event.target.dataset.index;
-            // let answer3Index = event.target.dataset.index;
-            // let answer4Index = event.target.dataset.index;
-            // console.log(questionIndex);
-            // console.log(answer1Index);
-            // console.log(answer2Index);
-            // console.log(answer3Index);
-            // console.log(answer4Index);
-
-            // let questionText = questionsCat1[0].question
-            // let answer1Text = questionsCat1[0].answer1[0]
-            // let answer2Text = questionsCat1[0].answer2[0]
-            // let answer3Text = questionsCat1[0].answer3[0]
-            // let answer4Text = questionsCat1[0].answer4[0]
-            // console.log(questionText);
-            // console.log(answer1Text);
-            // console.log(answer2Text);
-            // console.log(answer3Text);
-            // console.log(answer4Text);
-
-            // document.querySelector(".question").innerHTML = questionText;
-            // document.querySelector(".answers1").innerHTML = answer1Text;
-            // document.querySelector(".answers2").innerHTML = answer2Text;
-            // document.querySelector(".answers3").innerHTML = answer3Text;
-            // document.querySelector(".answers4").innerHTML = answer4Text;
 
             document.querySelector(".question").innerHTML = questionsCat1[event.target.dataset.index].question;
+            document.querySelector(".answers1").innerHTML = questionsCat1[event.target.dataset.index].answer1;
+            document.querySelector(".answers2").innerHTML = questionsCat1[event.target.dataset.index].answer2;
+            document.querySelector(".answers3").innerHTML = questionsCat1[event.target.dataset.index].answer3;
+            document.querySelector(".answers4").innerHTML = questionsCat1[event.target.dataset.index].answer4;
         })
     }
 }
 clickQuestion()
+
