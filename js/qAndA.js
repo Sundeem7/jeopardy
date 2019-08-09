@@ -207,4 +207,5 @@ let categoryQAndA = [
         answer3: "The Incredibles",
         answer4: "Brave",
         correct: "4"
-    },
+    }
+]

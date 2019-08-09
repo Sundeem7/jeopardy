@@ -10,68 +10,84 @@
 </head>
 
 <body>
-    <div class="containers headerContainer">
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal">
+            <a href="#closeModal" title="Close" class="closeModal">X</a>
+            <h1>Game Title</h1>
+            <p>Instructions</p>
+            <button id="start">Start</button>
+        </div>
+    </div>
+    <!-- header -->
+    <header class="containers headerContainer">
         <div class="points">0</div>
         <div class="gameTitle">Game Title</div>
         <div class="timer">0</div>
-        <!-- <button class="start">start</button>
-        <button class="stop">stop</button>
-        <button class="reset">reset</button> -->
+    </header>
+    <!-- questions and answers -->
+    <div class="questionDisplay">
+        <div class="question"></div>
+        <div class="answersContainer">
+            <div class="answers answers1" data-index="0"></div>
+            <div class="answers answers2" data-index="0"></div>
+            <div class="answers answers3" data-index="0"></div>
+            <div class="answers answers4" data-index="0"></div>
+        </div>
+    </div>
+    <!-- categories -->
+    <div class="bigContainer">
+        <div class="categoriesContainer">
+            <div class="categories catOne">Fiction Authors</div>
+            <div class="categories catTwo">Disney Movies</div>
+            <div class="categories catThree">Category</div>
+            <div class="categories catFour">Category</div>
+            <div class="categories catFive">Catergory</div>
+        </div>
+        <!-- 100 point questions -->
+        <div class="containers oneHContainer">
+            <div class="points oneHPoints" data-index="0">100</div>
+            <div class="points oneHPoints" data-index="5">100</div>
+            <div class="points oneHPoints" data-index="10">100</div>
+            <div class="points oneHPoints" data-index="15">100</div>
+            <div class="points oneHPoints" data-index="20">100</div>
+        </div>
+        <!-- 200 point questions -->
+        <div class="containers twoHContainer">
+            <div class="points twoHPoints" data-index="1">200</div>
+            <div class="points twoHPoints" data-index="6">200</div>
+            <div class="points twoHPoints" data-index="11">200</div>
+            <div class="points twoHPoints" data-index="16">200</div>
+            <div class="points twoHPoints" data-index="21">200</div>
+        </div>
+        <!-- 300 point questions -->
+        <div class="containers threeHContainer">
+            <div class="points threeHPoints" data-index="2">300</div>
+            <div class="points threeHPoints" data-index="7">300</div>
+            <div class="points threeHPoints" data-index="12">300</div>
+            <div class="points threeHPoints" data-index="17">300</div>
+            <div class="points threeHPoints" data-index="22">300</div>
+        </div>
+        <!-- 400 point questions -->
+        <div class="containers fourHContainer">
+            <div class="points fourHPoints" data-index="3">400</div>
+            <div class="points fourHPoints" data-index="8">400</div>
+            <div class="points fourHPoints" data-index="13">400</div>
+            <div class="points fourHPoints" data-index="18">400</div>
+            <div class="points fourHPoints" data-index="23">400</div>
+        </div>
+        <!-- 500 point questions -->
+        <div class="containers fiveHContainer">
+            <div class="points fiveHPoints" data-index="4">500</div>
+            <div class="points fiveHPoints" data-index="9">500</div>
+            <div class="points fiveHPoints" data-index="14">500</div>
+            <div class="points fiveHPoints" data-index="19">500</div>
+            <div class="points fiveHPoints" data-index="24">500</div>
+        </div>
     </div>
 
-    <div class="questionDisplay">
-<div class="question"></div>
-<div class="answersContainer">
-    <div class="answers answers1" data-index="0"></div>
-    <div class="answers answers2" data-index="0"></div>
-    <div class="answers answers3" data-index="0"></div>
-    <div class="answers answers4" data-index="0"></div>
-</div>
-    </div>
-<div class="bigContainer">
-    <div class="categoriesContainer">
-        <div class="categories catOne">Fiction Authors</div>
-        <div class="categories catTwo">Disney Movies</div>
-        <div class="categories catThree">Category</div>
-        <div class="categories catFour">Category</div>
-        <div class="categories catFive">Catergory</div>
-    </div>
-    <div class="containers oneHContainer">
-        <div class="points oneHPoints" data-index="0">100</div>
-        <div class="points oneHPoints" data-index="5">100</div>
-        <div class="points oneHPoints" data-index="10">100</div>
-        <div class="points oneHPoints" data-index="15">100</div>
-        <div class="points oneHPoints" data-index="20">100</div>
-    </div>
-    <div class="containers twoHContainer">
-        <div class="points twoHPoints" data-index="1">200</div>
-        <div class="points twoHPoints" data-index="6">200</div>
-        <div class="points twoHPoints" data-index="11">200</div>
-        <div class="points twoHPoints" data-index="16">200</div>
-        <div class="points twoHPoints" data-index="21">200</div>
-    </div>
-    <div class="containers threeHContainer">
-        <div class="points threeHPoints" data-index="2">300</div>
-        <div class="points threeHPoints" data-index="7">300</div>
-        <div class="points threeHPoints" data-index="12">300</div>
-        <div class="points threeHPoints" data-index="17">300</div>
-        <div class="points threeHPoints" data-index="22">300</div>
-    </div>
-    <div class="containers fourHContainer">
-        <div class="points fourHPoints" data-index="3">400</div>
-        <div class="points fourHPoints" data-index="8">400</div>
-        <div class="points fourHPoints" data-index="13">400</div>
-        <div class="points fourHPoints" data-index="18">400</div>
-        <div class="points fourHPoints" data-index="23">400</div>
-    </div>
-    <div class="containers fiveHContainer">
-        <div class="points fiveHPoints" data-index="4">500</div>
-        <div class="points fiveHPoints" data-index="9">500</div>
-        <div class="points fiveHPoints" data-index="14">500</div>
-        <div class="points fiveHPoints" data-index="19">500</div>
-        <div class="points fiveHPoints" data-index="24">500</div>
-    </div>
-</div>
+    <!-- <button class="stop">stop</button> -->
+    <!-- <button class="reset">reset</button> -->
 
     <script defer src="js/jquery_3.4.1.min.js"></script>
     <script defer src="js/qAndA.js"></script>

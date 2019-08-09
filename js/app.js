@@ -1,6 +1,10 @@
 console.log("working");
 let points = 0;
 
+
+// function myFunction() {
+//     document.getElementById("demo").innerHTML = "Iframe is loaded.";
+//   }
 // // correct question
 // function addPoints() {
 //     // add points to total points

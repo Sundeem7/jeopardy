@@ -3,6 +3,16 @@
     height: 100px;
 }
 
+.modal {
+    width: 600px;
+    height: 300px;
+	position: absolute;
+	margin: 10% auto;
+    border-radius: 10px;
+	background-color: black;
+	z-index: 99999;
+}
+
 .timer {
     height: 100px;
     width: 100px;
