@@ -1,5 +1,5 @@
 console.log("working");
-let points = 0;
+
 
 
 // function myFunction() {
@@ -16,9 +16,23 @@ let points = 0;
 //     console.log(totalPoints)
 // }
 
+// gets point value from parent Node 
+// function grabPoints() {
+//     let pointsAmount = document.querySelectorAll("myLI").parentNode.nodeName;
+//     document.getElementById("demo").innerHTML = x;
+
+// function grabsPoints(event) {
+//     let pointsAmount = event.target.innerText;
+//     console.log(pointsAmount);
+// }
+
+// if (categoryQAndA[event.target.dataset.index].answer1[1] === true) {
+//     points = 
+// }
+
 // ******************************************************************************
 
-// // // timer
+// // timer
 // let seconds = 1
 // let minutes = 0
 // let hours = 0
@@ -56,31 +70,60 @@ let points = 0;
 //     }
 // }
 
+// ****************************************************************************
 
-
-// Question appear on click
+// Question and answer choices appear on click
 // click .points (any square with a points value) to make question appear
+let pointsAmount = 0;
+
 function clickQuestion() {
     // declare .points
     let pointsQuestions = document.querySelectorAll(".points");
+    
     // create array for .points
     for (let i = 0; i < pointsQuestions.length; i++) {
         // add event listener to all .points
         pointsQuestions[i].addEventListener("click", (event) => {
             // declare .questionDisplay
             let questionDisplay = document.querySelector(".questionDisplay");
+            let pointsAmount = event.target.innerText;
+            
             // display on click
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
             }
             // uploads the correct question and answers in the box correlation when clicked
-            document.querySelector(".question").innerHTML = questionsCat1[event.target.dataset.index].question;
-            document.querySelector(".answers1").innerHTML = questionsCat1[event.target.dataset.index].answer1;
-            document.querySelector(".answers2").innerHTML = questionsCat1[event.target.dataset.index].answer2;
-            document.querySelector(".answers3").innerHTML = questionsCat1[event.target.dataset.index].answer3;
-            document.querySelector(".answers4").innerHTML = questionsCat1[event.target.dataset.index].answer4;
+            document.querySelector(".question").innerHTML = categoryQAndA[event.target.dataset.index].question;
+            document.querySelector(".answers1").innerHTML = categoryQAndA[event.target.dataset.index].answer1[0];
+            document.querySelector(".answers2").innerHTML = categoryQAndA[event.target.dataset.index].answer2[0];
+            document.querySelector(".answers3").innerHTML = categoryQAndA[event.target.dataset.index].answer3[0];
+            document.querySelector(".answers4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
+            checkAnswer(Number(pointsAmount));
+        })
+        
+    }
+}
+clickQuestion();
+
+let totalPoints = 0;
+// check if answer is correct or incorrect
+function checkAnswer(pointsAmount) {
+    //let pointsAmount = event.target.innerText;
+    let answers = document.querySelectorAll(".answers");
+
+    for (let i = 0; i < answers.length; i++) {
+
+        answers[i].addEventListener("click", (event) => {
+console.log(answers[i]);
+        if (categoryQAndA[event.target.dataset.index].answer1[1] === true) {
+            console.log(categoryQAndA[event.target.dataset.index].answer1[1])
+            totalPoints += pointsAmount;
+            console.log(totalPoints)
+        } else {
+            totalPoints -= pointsAmount;
+            console.log(totalPoints)
+        }
         })
     }
 }
-clickQuestion()
-
+// checkAnswer();

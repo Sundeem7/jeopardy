@@ -6,35 +6,31 @@ let categoryQAndA = [
     // Category 1
     {
         question: "Harry Potter",
-        answer1: "Veronica Roth",
-        answer2: "Cassandra Clare",
-        answer3: "JK Rowling",
-        answer4: "Laurel Hamilton",
-        correct: "3"
+        answer1: ["Veronica Roth", false],
+        answer2: ["Cassandra Clare", false],
+        answer3: ["JK Rowling", true],
+        answer4: ["Laurel Hamilton", false],    
     },
     {
         question: "Katniss Everdeen",
-        answer1: "J.R.R. Tolkien",
-        answer2: "Cassandra Claire",
-        answer3: "James Dashner",
-        answer4: "Suzanne Collins",
-        correct: "4"
+        answer1: ["J.R.R. Tolkien", false],
+        answer2: ["Cassandra Claire", false],
+        answer3: ["James Dashner", false],
+        answer4: ["Suzanne Collins", true]
     },
     {
         question: "Percy Jackson",
-        answer1: "George RR Martin",
-        answer2: "Christopher Paolini",
-        answer3: "Cassandra Clare",
-        answer4: "Rick Riordian",
-        correct: "4"
+        answer1: ["George RR Martin", false],
+        answer2: ["Christopher Paolini", false],
+        answer3: ["Cassandra Clare", false],
+        answer4: ["Rick Riordian", true]
     },
     {
         question: "Frodo Baggins",
-        answer1: "Veronica Roth",
-        answer2: "J.R.R. Tolkien",
-        answer3: "Cassandra Clare",
-        answer4: "James Dashner",
-        correct: "2"
+        answer1: ["Veronica Roth", false],
+        answer2: ["J.R.R. Tolkien", true],
+        answer3: ["Cassandra Clare", false],
+        answer4: ["James Dashner", false]
     },
     {
         question: "Thomas",
