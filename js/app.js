@@ -25,7 +25,6 @@ let points = 0;
 //     if (seconds <= 59) {
 //         // display time in .timer (display clock in top right corner)
 //         document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + convertTimerDisplay(minutes) + ":" + convertTimerDisplay(seconds);
-//         console.log(hours + ":" + minutes + ":" + seconds)
 //         seconds++
 //         // increment minutes once time is above 59
 //     } else if (seconds = 59) {
@@ -33,7 +32,6 @@ let points = 0;
 //         // displays seconds as zero instead of 60
 //         seconds = 0;
 //         document.querySelector(".timer").innerHTML = hours + ":" + convertTimerDisplay(minutes) + ":" + seconds;
-//         console.log(hours + ":" + minutes + ":" + seconds);
 //         // sets new value of seconds to 1 to begin incrementation again
 //         seconds = 1;
 //     } else if (minutes = 59) {
@@ -41,7 +39,6 @@ let points = 0;
 //         // displays minutes as 0, instead of 60
 //         minutes = 0;
 //         document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + minutes + ":" + seconds;
-//         console.log(hours + ":" + minutes + ":" + seconds)
 //     }
 // }
 // timeIncrement();
@@ -68,12 +65,11 @@ function clickQuestion() {
         pointsQuestions[i].addEventListener("click", (event) => {
             // declare .questionDisplay
             let questionDisplay = document.querySelector(".questionDisplay");
-            console.log(questionDisplay)
             // display on click
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
             }
-
+            // uploads the correct question and answers in the box correlation when clicked
             document.querySelector(".question").innerHTML = questionsCat1[event.target.dataset.index].question;
             document.querySelector(".answers1").innerHTML = questionsCat1[event.target.dataset.index].answer1;
             document.querySelector(".answers2").innerHTML = questionsCat1[event.target.dataset.index].answer2;
