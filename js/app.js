@@ -65,11 +65,30 @@ function clickQuestion() {
     for (let i = 0; i < pointsQuestions.length; i++) {
         // add event listener to all .points
         pointsQuestions[i].addEventListener("click", (event) => {
-            // create new div
-
+            // create questionDisplay for containers
+            let questionDisplay = document.createElement("div");
+            questionDisplay.className = 'questionDisplay';
             // create div inside new div for questions
+            let question = document.createElement("div");
+            question.className = 'question';
+            // create answerContainer and 4 divs inside new div for answers (needs id)
+            let answerContainer = document.createElement("div");
+            for (let i = 0; i < 4; i++) {
+                let answer = document.createElement("div");
+                answer.className = "answer";
+                answer.id = "answer[i]";
+                answer.setAttribute = ("data-answer", i);
+                answerContainer.appendChild(answer);
+            }
+            
+            // append question and answer to questionDisplay  
+            questionDisplay.appendChild(question);
+            questionDisplay.appendChild(answer);
+            // append questionDisplay to body
+            body.appendChild.questionDisplay;
 
-            // create 4 divs inside new div for answers (needs id)
+
+
         })
     }
 }
