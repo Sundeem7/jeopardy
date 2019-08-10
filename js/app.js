@@ -93,6 +93,14 @@ function clickQuestion() {
                 questionDisplay.style.display = "block";
             }
 
+            // uploads the correct question and answers in the box correlation when clicked
+            document.querySelector(".question").innerHTML = categoryQAndA[event.target.dataset.index].question;
+            document.querySelector("#answer1").innerHTML = categoryQAndA[event.target.dataset.index].answer1[0];
+            document.querySelector("#answer2").innerHTML = categoryQAndA[event.target.dataset.index].answer2[0];
+            document.querySelector("#answer3").innerHTML = categoryQAndA[event.target.dataset.index].answer3[0];
+            document.querySelector("#answer4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
+            // use pointsAmount, cQA, questionDisplay in function called checkAnswer
+            checkAnswer(questionDisplay);
         })
     }
 }
