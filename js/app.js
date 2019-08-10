@@ -104,6 +104,8 @@ function clickQuestion() {
             document.querySelector("#answer4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
             // use cQA and questionDisplay in function called checkAnswer
             checkAnswer(cQA, questionDisplay);
+            doubleJeopardy(pointsAmount)
+
         })
     }
 }
@@ -132,6 +134,7 @@ function checkAnswer(cQA, questionDisplay) {
             pointsDisplay = document.getElementById("points")
             pointsDisplay = totalPoints;
             console.log(totalPoints)
+            doubleJeopardy(pointsAmount)
         })
     }
 }
@@ -140,5 +143,12 @@ function checkAnswer(cQA, questionDisplay) {
 // **********************************************************
 // DOUBLE JEOPARDY
 
-
+//select random .points to be double jeopardy
+function doubleJeopardy(pointsQuestions, pointsAmount) {
+    let pointsQuestions = Math.floor((Math.random() * pointsQuestions.length));
+    pointsQuestions[pointsIndex] = pointsAmount * 2
+};
+​
+//call so quote appears when JS loads on page
+doubleJeopardy();
 
