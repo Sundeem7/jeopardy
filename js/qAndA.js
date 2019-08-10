@@ -3,20 +3,54 @@ console.log("working");
 
 // category questions (use data-index for correlation)
 let categoryQAndA = [
+    // cat1: [
+    //     {
+    //         question: "Harry Potter",
+    //         answers: ["Veronica Roth", "Cassandra Clare", "JK Rowling", "Laurel Hamilton"],
+    //         correctAnswerIndex: 3,
+    //         points: 100
+    //     },
+    //     {
+    //         question: "Katniss Everdeen",
+    //         answers: ["J.R.R. Tolkien", "Cassandra Clare", "James Dashner", "Suzanne Collins"],
+    //         correctAnswerIndex: 4,
+    //         points: 200
+    //     },
+    //     {
+    //         question: "Percy Jackson",
+    //         answers: ["George RR Martin", "Christopher Paolini", "Cassandra Claire", "Rick Riordiann"],
+    //         correctAnswerIndex: 4,
+    //         points: 300
+    //     },
+    //     {
+    //         question: "Frodo Baggins",
+    //         answers: ["Veronica Roth", "J.R.R. Tolkien", "Cassandra Claire", "James Dashner"],
+    //         correctAnswerIndex: 2,
+    //         points: 400
+    //     },
+    //     {
+    //         question: "Thomas",
+    //         answers: ["James Dashner", "Christopher Paolini", "Cassandra Claire", "Neil Gaiman"],
+    //         correctAnswerIndex: 1,
+    //         points: 500
+    //     }
+    // ]
+    
+// }
     // Category 1
     {
         question: "Harry Potter",
-        answer1: ["Veronica Roth", false],
-        answer2: ["Cassandra Clare", false],
-        answer3: ["JK Rowling", true],
-        answer4: ["Laurel Hamilton", false],    
+        answer1: ["Veronica Roth", false, 100],
+        answer2: ["Cassandra Clare", false, 100],
+        answer3: ["JK Rowling", true , 100],
+        answer4: ["Laurel Hamilton", false, 100],    
     },
     {
         question: "Katniss Everdeen",
-        answer1: ["J.R.R. Tolkien", false],
-        answer2: ["Cassandra Claire", false],
-        answer3: ["James Dashner", false],
-        answer4: ["Suzanne Collins", true]
+        answer1: ["J.R.R. Tolkien", false, 200],
+        answer2: ["Cassandra Claire", false, 200],
+        answer3: ["James Dashner", false, 200],
+        answer4: ["Suzanne Collins", true, 200]
     },
     {
         question: "Percy Jackson",
