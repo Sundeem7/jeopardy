@@ -48,12 +48,13 @@
     width: 400px;
 }
 
-.answersContainer {
+.answerContainer {
     border: solid orange;
     display: flex;
+    background-color:purple;
 }
 
-.answers {
+.answer {
     border: solid green;
     height: 100px;
     width: 100px;

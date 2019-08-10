@@ -19,8 +19,8 @@ console.log("working");
 
 
 // function timerIncrement() {
-    
-    
+
+
 //         // increment timer function every second
 //         window.setTimeout(timerIncrement, 1000)
 //         if (seconds <= 59) {
@@ -73,6 +73,7 @@ function clickQuestion() {
             question.className = 'question';
             // create answerContainer and 4 divs inside new div for answers (needs id)
             let answerContainer = document.createElement("div");
+            answerContainer.className = "answerContainer"
             for (let i = 0; i < 4; i++) {
                 let answer = document.createElement("div");
                 answer.className = "answer";
@@ -80,14 +81,17 @@ function clickQuestion() {
                 answer.setAttribute = ("data-answer", i);
                 answerContainer.appendChild(answer);
             }
-            
+
             // append question and answer to questionDisplay  
             questionDisplay.appendChild(question);
-            questionDisplay.appendChild(answer);
+            questionDisplay.appendChild(answerContainer);
             // append questionDisplay to body
-            body.appendChild.questionDisplay;
+            document.getElementsByTagName('body')[0].appendChild(questionDisplay);
 
-
+            // display on click
+            if (questionDisplay.style.display = "none") {
+                questionDisplay.style.display = "block";
+            }
 
         })
     }
