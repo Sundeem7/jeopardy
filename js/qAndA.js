@@ -3,38 +3,38 @@ console.log("working");
 
 // category questions (use data-index for correlation)
 let categoryQAndA = [
-    // cat1: [
-    //     {
-    //         question: "Harry Potter",
-    //         answers: ["Veronica Roth", "Cassandra Clare", "JK Rowling", "Laurel Hamilton"],
-    //         correctAnswerIndex: 3,
-    //         points: 100
-    //     },
-    //     {
-    //         question: "Katniss Everdeen",
-    //         answers: ["J.R.R. Tolkien", "Cassandra Clare", "James Dashner", "Suzanne Collins"],
-    //         correctAnswerIndex: 4,
-    //         points: 200
-    //     },
-    //     {
-    //         question: "Percy Jackson",
-    //         answers: ["George RR Martin", "Christopher Paolini", "Cassandra Claire", "Rick Riordiann"],
-    //         correctAnswerIndex: 4,
-    //         points: 300
-    //     },
-    //     {
-    //         question: "Frodo Baggins",
-    //         answers: ["Veronica Roth", "J.R.R. Tolkien", "Cassandra Claire", "James Dashner"],
-    //         correctAnswerIndex: 2,
-    //         points: 400
-    //     },
-    //     {
-    //         question: "Thomas",
-    //         answers: ["James Dashner", "Christopher Paolini", "Cassandra Claire", "Neil Gaiman"],
-    //         correctAnswerIndex: 1,
-    //         points: 500
-    //     }
-    // ]
+//     "cat1": [
+//         {
+//             question: "Harry Potter",
+//             answers: ["Veronica Roth", "Cassandra Clare", "JK Rowling", "Laurel Hamilton"],
+//             correctAnswerIndex: 3,
+//             points: 100
+//         },
+//         {
+//             question: "Katniss Everdeen",
+//             answers: ["J.R.R. Tolkien", "Cassandra Clare", "James Dashner", "Suzanne Collins"],
+//             correctAnswerIndex: 4,
+//             points: 200
+//         },
+//         {
+//             question: "Percy Jackson",
+//             answers: ["George RR Martin", "Christopher Paolini", "Cassandra Claire", "Rick Riordiann"],
+//             correctAnswerIndex: 4,
+//             points: 300
+//         },
+//         {
+//             question: "Frodo Baggins",
+//             answers: ["Veronica Roth", "J.R.R. Tolkien", "Cassandra Claire", "James Dashner"],
+//             correctAnswerIndex: 2,
+//             points: 400
+//         },
+//         {
+//             question: "Thomas",
+//             answers: ["James Dashner", "Christopher Paolini", "Cassandra Claire", "Neil Gaiman"],
+//             correctAnswerIndex: 1,
+//             points: 500
+//         }
+//     ]
     
 // }
     // Category 1
@@ -54,25 +54,24 @@ let categoryQAndA = [
     },
     {
         question: "Percy Jackson",
-        answer1: ["George RR Martin", false],
-        answer2: ["Christopher Paolini", false],
-        answer3: ["Cassandra Clare", false],
-        answer4: ["Rick Riordian", true]
+        answer1: ["George RR Martin", false, 300],
+        answer2: ["Christopher Paolini", false, 300],
+        answer3: ["Cassandra Clare", false, 300],
+        answer4: ["Rick Riordian", true, 300]
     },
     {
         question: "Frodo Baggins",
-        answer1: ["Veronica Roth", false],
-        answer2: ["J.R.R. Tolkien", true],
-        answer3: ["Cassandra Clare", false],
-        answer4: ["James Dashner", false]
+        answer1: ["Veronica Roth", false, 400],
+        answer2: ["J.R.R. Tolkien", true, 400],
+        answer3: ["Cassandra Clare", false, 400],
+        answer4: ["James Dashner", false, 400]
     },
     {
         question: "Thomas",
-        answer1: "James Dashner",
-        answer2: "Christopher Paolini",
-        answer3: "Cassandra Clare",
-        answer4: "Neil Gaiman",
-        correct: "1"
+        answer1: ["James Dashner", true, 500],
+        answer2: ["Christopher Paolini", false, 500],
+        answer3: ["Cassandra Clare", false, 500],
+        answer4: ["Neil Gaiman", false, 500]
     },
     // Category 2
     {

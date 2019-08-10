@@ -77,7 +77,8 @@ function clickQuestion() {
             for (let i = 0; i < 4; i++) {
                 let answer = document.createElement("div");
                 answer.className = "answer";
-                answer.id = "answer[i]";
+                // grabs correct index number from answer array
+                answer.id = `answer${i + 1}`;
                 answer.setAttribute = ("data-answer", i);
                 answerContainer.appendChild(answer);
             }
@@ -92,6 +93,8 @@ function clickQuestion() {
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
             }
+            // grabs object containing onject at the data-index to use in function called checkAnswer
+            let cQA = categoryQAndA[event.target.dataset.index];
 
             // uploads the correct question and answers in the box correlation when clicked
             document.querySelector(".question").innerHTML = categoryQAndA[event.target.dataset.index].question;
@@ -99,31 +102,41 @@ function clickQuestion() {
             document.querySelector("#answer2").innerHTML = categoryQAndA[event.target.dataset.index].answer2[0];
             document.querySelector("#answer3").innerHTML = categoryQAndA[event.target.dataset.index].answer3[0];
             document.querySelector("#answer4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
-            // use pointsAmount, cQA, questionDisplay in function called checkAnswer
-            checkAnswer(questionDisplay);
+            // use cQA and questionDisplay in function called checkAnswer
+            checkAnswer(cQA, questionDisplay);
         })
     }
 }
 clickQuestion();
-// let totalPoints = 0;
+
+let totalPoints = 0;
 // check if answer is correct or incorrect
-function checkAnswer(pointsAmount, cQA, questionDisplay) {
-    //let pointsAmount = event.target.innerText;
-    let answers = document.querySelectorAll(".answers");
-    let totalPoints = 0;
+function checkAnswer(cQA, questionDisplay) {
+
+
+
+    let answers = document.querySelectorAll(".answer");
+    // console.log(pointsAmount);
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener("click", (event) => {
+            let pointsAmount = cQA[event.target.id][2];
+            // console.log(pointsAmount)
             // uses id of event  to grab second index of same array in object
             if (cQA[event.target.id][1] === true) {
                 totalPoints += pointsAmount;
                 questionDisplay.style.display = "none"
-                console.log(totalPoints)
+                // console.log(totalPoints)
             } else {
                 totalPoints -= pointsAmount;
-                console.log(totalPoints)
+                // console.log(totalPoints)
                 questionDisplay.style.display = "none"
             }
+            pointsDisplay = document.getElementById("points")
+            console.log(totalPoints)
         })
     }
+    // console.log(totalPoints)
+    // return totalPoints;
 }
 // checkAnswer();
+
