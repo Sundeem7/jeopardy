@@ -2,11 +2,10 @@ console.log("working");
 
 // ******************************************************************************
 
-// // timer
+// // TIMER
 // let seconds = 1
 // let minutes = 0
 // let hours = 0
-
 
 // let startButton = document.getElementById("start")
 // startButton.addEventListener("click", (event) => {
@@ -16,7 +15,6 @@ console.log("working");
 //         modalWindow.style.display = "none";
 //     }
 // })
-
 
 // function timerIncrement() {
 
@@ -54,6 +52,7 @@ console.log("working");
 
 // ****************************************************************************
 
+// Q & A section
 console.log("working");
 // Question and answer choices appear on click
 // click .points (any square with a points value) to make question appear
@@ -94,6 +93,7 @@ function clickQuestion() {
                 questionDisplay.style.display = "block";
             }
             // grabs object containing onject at the data-index to use in function called checkAnswer
+            // use below to quickly reference
             let cQA = categoryQAndA[event.target.dataset.index];
 
             // uploads the correct question and answers in the box correlation when clicked
@@ -113,30 +113,32 @@ let totalPoints = 0;
 // check if answer is correct or incorrect
 function checkAnswer(cQA, questionDisplay) {
 
-
-
+    // check the box
     let answers = document.querySelectorAll(".answer");
-    // console.log(pointsAmount);
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener("click", (event) => {
+            // get point value from EVENT TARGET'S second index
             let pointsAmount = cQA[event.target.id][2];
-            // console.log(pointsAmount)
             // uses id of event  to grab second index of same array in object
             if (cQA[event.target.id][1] === true) {
                 totalPoints += pointsAmount;
-                questionDisplay.style.display = "none"
-                // console.log(totalPoints)
+                // remove child and re-initiate clickQuestion();
+                questionDisplay.parentNode.removeChild(questionDisplay);
             } else {
                 totalPoints -= pointsAmount;
-                // console.log(totalPoints)
-                questionDisplay.style.display = "none"
+                // remove child and re-initiate clickQuestion();
+                questionDisplay.parentNode.removeChild(questionDisplay);
             }
             pointsDisplay = document.getElementById("points")
+            pointsDisplay = totalPoints;
             console.log(totalPoints)
         })
     }
-    // console.log(totalPoints)
-    // return totalPoints;
 }
 // checkAnswer();
+
+// **********************************************************
+// DOUBLE JEOPARDY
+
+
 
