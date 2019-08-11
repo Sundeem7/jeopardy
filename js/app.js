@@ -46,63 +46,68 @@ function clickQuestion() {
             document.querySelector("#answer4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
             // use cQA and questionDisplay in function called checkAnswer
             checkAnswer(cQA, questionDisplay);
+
+
+            randomIndex = [Math.floor(Math.random() * categoryQAndA.length)];
+            console.log(randomIndex);
+            console.log(categoryQAndA[randomIndex])
         })
     }
+    // DOUBLE JEOPARDY
+    // select random pointsQuestions array index
+    // randomIndex = [Math.floor(Math.random() * pointsQuestions.length)];
+    // console.log(randomIndex);
+    // console.log(pointsQuestions[randomIndex]);
+    // console.log(categoryQAndA);
+    // console.log(categoryQAndA[randomIndex]);
+    
+    
+    // console.log(categoryQAndA[randomIndex][event.target.id]);
+    // let cQArI = categoryQAndA[randomIndex];
+    // checkAnswer(cQArI);
+    // console.log(categoryQAndA);
+//     if (cQArI === cQA[event.target]) {
+//         doubleJeopardy;
+
 }
 
 clickQuestion();
 
-function doubleJeopardyPoints() {
-    // DOUBLE JEOPARDY
-    // select random pointsQuestions array index
-    randomIndex = [Math.floor(Math.random() * pointsQuestions.length)];
-    checkAnswer(randomIndex);
-    console.log[randomIndex];
-    // console.log(cQA[randomIndex]);
-    // console.log()
-    // if (pointsQuestions[randomIndex] === pointsQuestions[event.target]) {
-    //     pointsAmount = pointsAmount * 2;
-    // }
-    console.log(pointsQuestions[randomIndex]);
-    console.log(pointsQuestions[event.target.dataset.index]);
-    // console.log(pointsQuestions[event.target.dataset.index]);
-
-    // calculate double jeopardy points
-    // if (doubleJeopardy === cQA) {
-    //     pointsAmount = pointsAmount * 2;
-    // }
-}
 
 
 let totalPoints = 0;
 // check if answer is correct or incorrect
-function checkAnswer(cQA, questionDisplay) {
+function checkAnswer(cQA, questionDisplay, cQArI) {
+    // console.log(cQA[event.target]);
     // check the box
     let answers = document.querySelectorAll(".answer");
-    // console.log(doubleJeopardy);
+
 
 
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener("click", (event) => {
-            // get point value from EVENT TARGET'S second index
+
             let pointsAmount = cQA[event.target.id][2];
 
-            // uses id of event  to grab second index of same array in object
-            if (cQA[event.target.id][1] === true) {
-                totalPoints += pointsAmount;
-                // remove child and re-initiate clickQuestion();
-                questionDisplay.parentNode.removeChild(questionDisplay);
-                console.log(totalPoints);
-            } else {
-                totalPoints -= pointsAmount;
-                // remove child and re-initiate clickQuestion();
-                questionDisplay.parentNode.removeChild(questionDisplay);
-                console.log(totalPoints);
-            }
-            pointsDisplay = document.getElementById("points")
-            pointsDisplay = totalPoints;
+
+                // uses id of event  to grab second index of same array in object
+                if (cQA[event.target.id][1] === true) {
+                    totalPoints += pointsAmount;
+                    // remove child and re-initiate clickQuestion();
+                    questionDisplay.parentNode.removeChild(questionDisplay);
+                    console.log(totalPoints);
+                } else {
+                    totalPoints -= pointsAmount;
+                    // remove child and re-initiate clickQuestion();
+                    questionDisplay.parentNode.removeChild(questionDisplay);
+                    console.log(totalPoints);
+                }
+                // pointsDisplay = document.getElementById("points")
+                // pointsDisplay = totalPoints;
+            // }
 
         })
     }
+    
 }
 // checkAnswer();
