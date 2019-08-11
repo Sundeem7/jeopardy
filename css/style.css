@@ -1,5 +1,5 @@
 body {
-    background-color: #272727;
+    background-color: white;
 }
 .headerContainer {
     border: solid black;
@@ -23,7 +23,6 @@ body {
 }
 
 .categoriesContainer {
-    border: solid brown;
     display: flex;
 }
 .containers {
@@ -31,7 +30,6 @@ body {
 }
 
 .bigContainer {
-    border: dotted black;
     position: absolute;    
 }
 
@@ -64,9 +62,17 @@ body {
 }
 
 .categories {
-    border: solid gray;
-    height: 100px;
-    width: 100px;
+    height: 115px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    color: #186068;
+    background-color: white;
 }
 
 .points {
@@ -78,13 +84,12 @@ body {
     align-items: center;
     font-size: 50px;
     margin: 15px;
-    color: #2EB9C9;
-    box-shadow: 5px 5px 10px #228793;
+    color: black;
     background-color: #E1E3E3;
 }
 .points:hover {
     transition: 0.3s;
-    color: #E1E3E3;
-    box-shadow: 5px 5px 10px #E1E3E3;
+    color: #050505;
+    box-shadow: 0 1px 4px #E1E3E3, 0 0 30px #E1E3E3;
     background-color: #2EB9C9;
 }

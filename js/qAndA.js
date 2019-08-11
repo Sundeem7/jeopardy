@@ -88,7 +88,7 @@ let categoryQAndA = [
         answer1: ["Boston", true, 200],
         answer2: ["Cambridge", false, 200],
         answer3: ["Burlington", false, 200],
-        answer4: ["", false, 200],
+        answer4: ["Salem", false, 200],
     },
     {
         question: "Texas",

@@ -31,10 +31,11 @@ function clickQuestion() {
             questionDisplay.appendChild(answerContainer);
             // append questionDisplay to body
             document.getElementsByTagName('body')[0].appendChild(questionDisplay);
-            // display on click
+            // display Questions nad answers on click
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
             }
+
             // grabs object containing onject at the data-index to use in function called checkAnswer
             // use below to quickly reference
             let cQA = categoryQAndA[event.target.dataset.index];
@@ -48,11 +49,12 @@ function clickQuestion() {
             checkAnswer(cQA, questionDisplay);
 
 
-            randomIndex = [Math.floor(Math.random() * categoryQAndA.length)];
-            console.log(randomIndex);
-            console.log(categoryQAndA[randomIndex])
+            // randomIndex = [Math.floor(Math.random() * categoryQAndA.length)];
+            // console.log(randomIndex);
+            // console.log(categoryQAndA[randomIndex])
         })
     }
+
     // DOUBLE JEOPARDY
     // select random pointsQuestions array index
     // randomIndex = [Math.floor(Math.random() * pointsQuestions.length)];
@@ -60,25 +62,35 @@ function clickQuestion() {
     // console.log(pointsQuestions[randomIndex]);
     // console.log(categoryQAndA);
     // console.log(categoryQAndA[randomIndex]);
-    
-    
+
+
     // console.log(categoryQAndA[randomIndex][event.target.id]);
     // let cQArI = categoryQAndA[randomIndex];
     // checkAnswer(cQArI);
     // console.log(categoryQAndA);
-//     if (cQArI === cQA[event.target]) {
-//         doubleJeopardy;
+    //     if (cQArI === cQA[event.target]) {
+    //         doubleJeopardy;
 
 }
 
 clickQuestion();
 
+function getDoublePoints() {
+
+    let pointsIndex = document.querySelectorAll(".points"); {
+
+        randomIndex = [Math.floor(Math.random() * pointsIndex.length)];
+        console.log(randomIndex);
+
+    }
+
+}
+getDoublePoints()
 
 
 let totalPoints = 0;
 // check if answer is correct or incorrect
 function checkAnswer(cQA, questionDisplay, cQArI) {
-    // console.log(cQA[event.target]);
     // check the box
     let answers = document.querySelectorAll(".answer");
 
@@ -90,24 +102,29 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
             let pointsAmount = cQA[event.target.id][2];
 
 
-                // uses id of event  to grab second index of same array in object
-                if (cQA[event.target.id][1] === true) {
-                    totalPoints += pointsAmount;
-                    // remove child and re-initiate clickQuestion();
-                    questionDisplay.parentNode.removeChild(questionDisplay);
-                    console.log(totalPoints);
-                } else {
-                    totalPoints -= pointsAmount;
-                    // remove child and re-initiate clickQuestion();
-                    questionDisplay.parentNode.removeChild(questionDisplay);
-                    console.log(totalPoints);
-                }
-                pointsDisplay = document.getElementById("points").innerHTML
-                pointsDisplay = totalPoints;
-            // }
+            // uses id of event  to grab second index of same array in object
+            if (cQA[event.target.id][1] === true) {
+                totalPoints += pointsAmount;
+                // remove child and re-initiate clickQuestion();
+                questionDisplay.parentNode.removeChild(questionDisplay);
+                console.log(totalPoints);
+            } else {
+                totalPoints -= pointsAmount;
+                // remove child and re-initiate clickQuestion();
+                questionDisplay.parentNode.removeChild(questionDisplay);
+                console.log(totalPoints);
+            }
+            document.getElementById("points").innerHTML = totalPoints;
+            
 
         })
     }
-    
+
 }
 // checkAnswer();
+
+if (totalPoints >= 0) {
+    console.log("you win")
+} else {
+    console.log("try again buddy")
+}
