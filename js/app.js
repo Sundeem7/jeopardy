@@ -105,19 +105,18 @@ function clickQuestion() {
             document.querySelector("#answer4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
             // use cQA and questionDisplay in function called checkAnswer
             checkAnswer(cQA, questionDisplay);
-            
+
 
         })
     }
     // DOUBLE JEOPARDY
     // select random pointsQuestions array index
-    doubleJeopardy = [Math.floor(Math.random() * pointsQuestions.length)];
-    let twicePoints = pointsQuestions[doubleJeopardy];
-    // twicePoints = 
+    randomIndex = [Math.floor(Math.random() * pointsQuestions.length)];
+    // assign randomIndex
+    let doubleJeopardy;
+    doubleJeopardy = pointsQuestions[randomIndex];
+    checkAnswer(doubleJeopardy);
     
-    console.log(twicePoints);
-    checkAnswer(twicePoints);
-//     if ()
 }
 clickQuestion();
 
@@ -129,24 +128,25 @@ function checkAnswer(cQA, questionDisplay, doubleJeopardy) {
     let answers = document.querySelectorAll(".answer");
     // console.log(doubleJeopardy);
 
-
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener("click", (event) => {
+            console.log(cQA)
             // get point value from EVENT TARGET'S second index
             let pointsAmount = cQA[event.target.id][2];
-            // twicePoints = pointsAmount * 2;
-            
-            
+            console.log(cQA[event.target.id])
+            // calculate double jeopardy points
+            if (doubleJeopardy === cQA[event.target.id]) {
+                pointsAmount = pointsAmount * 2;
+            }
+
             // uses id of event  to grab second index of same array in object
             if (cQA[event.target.id][1] === true) {
                 totalPoints += pointsAmount;
                 // remove child and re-initiate clickQuestion();
-                event.target.style.backgroundColor = "black";
                 questionDisplay.parentNode.removeChild(questionDisplay);
             } else {
                 totalPoints -= pointsAmount;
                 // remove child and re-initiate clickQuestion();
-                event.target.style.backgroundColor = "black";
                 questionDisplay.parentNode.removeChild(questionDisplay);
             }
             pointsDisplay = document.getElementById("points")
