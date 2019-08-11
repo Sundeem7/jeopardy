@@ -2,53 +2,53 @@ console.log("working");
 
 // ******************************************************************************
 
-// // TIMER
-// let seconds = 1
-// let minutes = 0
-// let hours = 0
+// TIMER
+let seconds = 1
+let minutes = 0
+let hours = 0
 
-// let startButton = document.getElementById("start")
-// startButton.addEventListener("click", (event) => {
-//     let modalWindow = document.getElementById("modal");
-//     timerIncrement();
-//     if (modalWindow.style.display = "block") {
-//         modalWindow.style.display = "none";
-//     }
-// })
+let startButton = document.getElementById("start")
+startButton.addEventListener("click", (event) => {
+    let modalWindow = document.getElementById("modal");
+    timerIncrement();
+    if (modalWindow.style.display = "block") {
+        modalWindow.style.display = "none";
+    }
+})
 
-// function timerIncrement() {
+function timerIncrement() {
 
 
-//         // increment timer function every second
-//         window.setTimeout(timerIncrement, 1000)
-//         if (seconds <= 59) {
-//             // display time in .timer (display clock in top right corner)
-//             document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + convertTimerDisplay(minutes) + ":" + convertTimerDisplay(seconds);
-//             seconds++
-//             // increment minutes once time is above 59
-//         } else if (seconds = 59) {
-//             minutes++
-//             // displays seconds as zero instead of 60
-//             seconds = 0;
-//             document.querySelector(".timer").innerHTML = hours + ":" + convertTimerDisplay(minutes) + ":" + seconds;
-//             // sets new value of seconds to 1 to begin incrementation again
-//             seconds = 1;
-//         } else if (minutes = 59) {
-//             hours++
-//             // displays minutes as 0, instead of 60
-//             minutes = 0;
-//             document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + minutes + ":" + seconds;
-//         }
-// }
+        // increment timer function every second
+        window.setTimeout(timerIncrement, 1000)
+        if (seconds <= 59) {
+            // display time in .timer (display clock in top right corner)
+            document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + convertTimerDisplay(minutes) + ":" + convertTimerDisplay(seconds);
+            seconds++
+            // increment minutes once time is above 59
+        } else if (seconds = 59) {
+            minutes++
+            // displays seconds as zero instead of 60
+            seconds = 0;
+            document.querySelector(".timer").innerHTML = hours + ":" + convertTimerDisplay(minutes) + ":" + seconds;
+            // sets new value of seconds to 1 to begin incrementation again
+            seconds = 1;
+        } else if (minutes = 59) {
+            hours++
+            // displays minutes as 0, instead of 60
+            minutes = 0;
+            document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + minutes + ":" + seconds;
+        }
+}
 
-// // add "0" infront of numbers <= 9
-// function convertTimerDisplay(num) {
-//     if (num <= 9) {
-//         return ("0" + num);
-//     } else {
-//         return num;
-//     }
-// }
+// add "0" infront of numbers <= 9
+function convertTimerDisplay(num) {
+    if (num <= 9) {
+        return ("0" + num);
+    } else {
+        return num;
+    }
+}
 
 // ****************************************************************************
 
@@ -60,6 +60,8 @@ let pointsAmount = 0;
 function clickQuestion() {
     // declare .points
     let pointsQuestions = document.querySelectorAll(".points");
+    let jeopardyQuestions[Math.floor(Math.random() * jeopardyQuestions.length)];
+    
     // create array for .points
     for (let i = 0; i < pointsQuestions.length; i++) {
         // add event listener to all .points
@@ -104,7 +106,6 @@ function clickQuestion() {
             document.querySelector("#answer4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
             // use cQA and questionDisplay in function called checkAnswer
             checkAnswer(cQA, questionDisplay);
-            doubleJeopardy(pointsAmount)
 
         })
     }
@@ -125,16 +126,17 @@ function checkAnswer(cQA, questionDisplay) {
             if (cQA[event.target.id][1] === true) {
                 totalPoints += pointsAmount;
                 // remove child and re-initiate clickQuestion();
+                event.target.style.backgroundColor = "black";
                 questionDisplay.parentNode.removeChild(questionDisplay);
             } else {
                 totalPoints -= pointsAmount;
                 // remove child and re-initiate clickQuestion();
+                event.target.style.backgroundColor = "black";
                 questionDisplay.parentNode.removeChild(questionDisplay);
             }
             pointsDisplay = document.getElementById("points")
             pointsDisplay = totalPoints;
             console.log(totalPoints)
-            doubleJeopardy(pointsAmount)
         })
     }
 }
@@ -144,11 +146,20 @@ function checkAnswer(cQA, questionDisplay) {
 // DOUBLE JEOPARDY
 
 //select random .points to be double jeopardy
-function doubleJeopardy(pointsQuestions, pointsAmount) {
-    let pointsQuestions = Math.floor((Math.random() * pointsQuestions.length));
-    pointsQuestions[pointsIndex] = pointsAmount * 2
-};
-​
-//call so quote appears when JS loads on page
-doubleJeopardy();
+// function doubleJeopardy(pointsAmount) {
+
+//     let jeopardyQuestions = document.querySelectorAll(".points");
+
+//     for (let i = 0; i < jeopardyQuestions.length; i++) {
+//         jeopardyQuestions = Math.floor((Math.random() * jeopardyQuestions.length));
+//         jeopardyQuestions[i] = pointsAmount * 2;
+//     }
+// };
+// // doubleJeopardy();
+// console.log(jeopardyQuestions[i]);
+
+// ***********************************************************
+// FINAL QUESTION
+
+
 
