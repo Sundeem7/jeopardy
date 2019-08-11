@@ -1,66 +1,10 @@
-console.log("working");
-
-// ******************************************************************************
-
-// TIMER
-let seconds = 1
-let minutes = 0
-let hours = 0
-
-let startButton = document.getElementById("start")
-startButton.addEventListener("click", (event) => {
-    let modalWindow = document.getElementById("modal");
-    timerIncrement();
-    if (modalWindow.style.display = "block") {
-        modalWindow.style.display = "none";
-    }
-})
-
-function timerIncrement() {
-
-
-    // increment timer function every second
-    window.setTimeout(timerIncrement, 1000)
-    if (seconds <= 59) {
-        // display time in .timer (display clock in top right corner)
-        document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + convertTimerDisplay(minutes) + ":" + convertTimerDisplay(seconds);
-        seconds++
-        // increment minutes once time is above 59
-    } else if (seconds = 59) {
-        minutes++
-        // displays seconds as zero instead of 60
-        seconds = 0;
-        document.querySelector(".timer").innerHTML = hours + ":" + convertTimerDisplay(minutes) + ":" + seconds;
-        // sets new value of seconds to 1 to begin incrementation again
-        seconds = 1;
-    } else if (minutes = 59) {
-        hours++
-        // displays minutes as 0, instead of 60
-        minutes = 0;
-        document.querySelector(".timer").innerHTML = convertTimerDisplay(hours) + ":" + minutes + ":" + seconds;
-    }
-}
-
-// add "0" infront of numbers <= 9
-function convertTimerDisplay(num) {
-    if (num <= 9) {
-        return ("0" + num);
-    } else {
-        return num;
-    }
-}
-
-// ****************************************************************************
-
-// Q & A section
-console.log("working");
+console.log("working")
 // Question and answer choices appear on click
 // click .points (any square with a points value) to make question appear
 let pointsAmount = 0;
 function clickQuestion() {
     // declare .points
     let pointsQuestions = document.querySelectorAll(".points");
-
     // create array for .points
     for (let i = 0; i < pointsQuestions.length; i++) {
         // add event listener to all .points
@@ -82,13 +26,11 @@ function clickQuestion() {
                 answer.setAttribute = ("data-answer", i);
                 answerContainer.appendChild(answer);
             }
-
             // append question and answer to questionDisplay  
             questionDisplay.appendChild(question);
             questionDisplay.appendChild(answerContainer);
             // append questionDisplay to body
             document.getElementsByTagName('body')[0].appendChild(questionDisplay);
-
             // display on click
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
@@ -96,7 +38,6 @@ function clickQuestion() {
             // grabs object containing onject at the data-index to use in function called checkAnswer
             // use below to quickly reference
             let cQA = categoryQAndA[event.target.dataset.index];
-
             // uploads the correct question and answers in the box correlation when clicked
             document.querySelector(".question").innerHTML = categoryQAndA[event.target.dataset.index].question;
             document.querySelector("#answer1").innerHTML = categoryQAndA[event.target.dataset.index].answer1[0];
@@ -105,56 +46,63 @@ function clickQuestion() {
             document.querySelector("#answer4").innerHTML = categoryQAndA[event.target.dataset.index].answer4[0];
             // use cQA and questionDisplay in function called checkAnswer
             checkAnswer(cQA, questionDisplay);
-
-
         })
     }
+}
+
+clickQuestion();
+
+function doubleJeopardyPoints() {
     // DOUBLE JEOPARDY
     // select random pointsQuestions array index
     randomIndex = [Math.floor(Math.random() * pointsQuestions.length)];
-    // assign randomIndex
-    let doubleJeopardy;
-    doubleJeopardy = pointsQuestions[randomIndex];
-    checkAnswer(doubleJeopardy);
-    
+    checkAnswer(randomIndex);
+    console.log[randomIndex];
+    // console.log(cQA[randomIndex]);
+    // console.log()
+    // if (pointsQuestions[randomIndex] === pointsQuestions[event.target]) {
+    //     pointsAmount = pointsAmount * 2;
+    // }
+    console.log(pointsQuestions[randomIndex]);
+    console.log(pointsQuestions[event.target.dataset.index]);
+    // console.log(pointsQuestions[event.target.dataset.index]);
+
+    // calculate double jeopardy points
+    // if (doubleJeopardy === cQA) {
+    //     pointsAmount = pointsAmount * 2;
+    // }
 }
-clickQuestion();
+
 
 let totalPoints = 0;
 // check if answer is correct or incorrect
-function checkAnswer(cQA, questionDisplay, doubleJeopardy) {
-    console.log(cQA);
+function checkAnswer(cQA, questionDisplay) {
     // check the box
     let answers = document.querySelectorAll(".answer");
     // console.log(doubleJeopardy);
 
+
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener("click", (event) => {
-            console.log(cQA)
             // get point value from EVENT TARGET'S second index
             let pointsAmount = cQA[event.target.id][2];
-            console.log(cQA[event.target.id])
-            // calculate double jeopardy points
-            if (doubleJeopardy === cQA[event.target.id]) {
-                pointsAmount = pointsAmount * 2;
-            }
 
             // uses id of event  to grab second index of same array in object
             if (cQA[event.target.id][1] === true) {
                 totalPoints += pointsAmount;
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
+                console.log(totalPoints);
             } else {
                 totalPoints -= pointsAmount;
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
+                console.log(totalPoints);
             }
             pointsDisplay = document.getElementById("points")
             pointsDisplay = totalPoints;
+
         })
     }
 }
 // checkAnswer();
-
-// ***********************************************************
-// FINAL QUESTION
