@@ -94,8 +94,6 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
     // check the box
     let answers = document.querySelectorAll(".answer");
 
-
-
     for (let i = 0; i < answers.length; i++) {
         answers[i].addEventListener("click", (event) => {
 
@@ -108,14 +106,29 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
                 console.log(totalPoints);
+                // create questionDisplay for containers
+                let correctAnswer = document.createElement("div");
+                let correctText = document.createTextNode("Correct!!")
+                correctAnswer.appendChild(correctText)
+                correctAnswer.className = 'correctAnswer';
+                // append questionDisplay to body
+                document.getElementsByTagName('body')[0].appendChild(correctAnswer);
+                // display Questions nad answers on click
             } else {
                 totalPoints -= pointsAmount;
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
                 console.log(totalPoints);
+                // create questionDisplay for containers
+                let incorrectAnswer = document.createElement("div");
+                let incorrectText = document.createTextNode("Sorry, that's incorrect.")
+                incorrectAnswer.appendChild(incorrectText)
+                incorrectAnswer.className = 'correctanswer';
+                // append questionDisplay to body
+                document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
+                // display Questions nad answers on click
             }
             document.getElementById("points").innerHTML = totalPoints;
-            
 
         })
     }
@@ -123,8 +136,8 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
 }
 // checkAnswer();
 
-if (totalPoints >= 0) {
+if (totalPoints >= 5000) {
     console.log("you win")
-} else {
+} else if (totalPoints <= -2000) {
     console.log("try again buddy")
 }
