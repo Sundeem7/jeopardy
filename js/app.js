@@ -102,8 +102,8 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                     questionDisplay.parentNode.removeChild(questionDisplay);
                     console.log(totalPoints);
                 }
-                // pointsDisplay = document.getElementById("points")
-                // pointsDisplay = totalPoints;
+                pointsDisplay = document.getElementById("points").innerHTML
+                pointsDisplay = totalPoints;
             // }
 
         })

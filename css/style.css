@@ -1,3 +1,6 @@
+body {
+    background-color: #272727;
+}
 .headerContainer {
     border: solid black;
     height: 100px;
@@ -67,7 +70,21 @@
 }
 
 .points {
-    border: solid pink;
     height: 100px;
-    width: 100px;
+    width: 200px;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin: 15px;
+    color: #2EB9C9;
+    box-shadow: 5px 5px 10px #228793;
+    background-color: #E1E3E3;
+}
+.points:hover {
+    transition: 0.3s;
+    color: #E1E3E3;
+    box-shadow: 5px 5px 10px #E1E3E3;
+    background-color: #2EB9C9;
 }
