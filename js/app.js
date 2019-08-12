@@ -93,7 +93,6 @@ function clickQuestion() {
             }
             event.target.style.backgroundColor = "gray";
             event.target.style.color = "gray";
-            // event.target.style.backgroundColor = "black";
 
             // grabs object containing onject at the data-index to use in function called checkAnswer
             // use below to quickly reference
@@ -147,6 +146,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
                 // correct answer innerText
                 document.querySelector(".correctAnswer").innerHTML = "Time to get SCHWIFTY!! Add some points Morty!";
+                
                 // remove correct Answers on click
                 let removecorrectAnswers = document.querySelector(".correctAnswer")
                 function removeCAnswers() {

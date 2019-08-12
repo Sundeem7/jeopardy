@@ -9,6 +9,8 @@ body {
     height: 100vh;
     width: 100vw;
     font-family: rickAndMortyFont;
+    font-size: 40px;
+    text-align: center;
 }
 
 .headerContainer {
@@ -48,31 +50,41 @@ body {
 }
 
 .questionDisplay {
-    border: solid yellow;
-    height: 600px;
-    width: 600px;
+    height: 400px;
+    width: 800px;
     position: absolute;
-    background-color: yellow;
     z-index: 1;
     display: none;
+    display: flex;
+    margin: 100px 425px;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("images.jpeg") */
 }
 
 .question {
-    border: solid red;
-    height: 100px;
-    width: 400px;
+    height: 200px;
+    width: 800px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .answerContainer {
-    border: solid orange;
+    border: solid black;
     display: flex;
-    background-color: purple;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .answer {
-    border: solid green;
     height: 100px;
-    width: 100px;
+    width: 200px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .categories {
@@ -143,4 +155,61 @@ body {
     text-align: center;
     font-size: 40px;
     text-shadow: 1px 1px 5px white;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #6cc04a;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #999;
+    animation: clicky 1s infinite;
+    position: absolute;
+    z-index: 999990;
+}
+
+button:hover {
+    background-color: #498631
+}
+
+button:active {
+    background-color: #498631;
+    box-shadow: 0 3px #666;
+    transform: translateY(4px);
+}
+
+/* Animation for Submit button */
+
+@keyframes clicky {
+    0% {
+        background-color: #6cc04a;
+        box-shadow: 0 6px #999;
+    }
+    50% {
+        background-color: 498631;
+        box-shadow: 0 3px #666;
+        transform: translateY(4px);
+    }
+    100% {
+        background-color: #6cc04a;
+        box-shadow: 0 6px #999;
+    }
+}
+
+h1 {
+    position: absolute;
+    z-index: 999990;
+}
+p {
+    position: absolute;
+    z-index: 999990;
+}
+img {
+    position: absolute;
+    z-index: 99999;
 }
