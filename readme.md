@@ -1,4 +1,4 @@
-# Simon-Game
+# Jeopardy-Game
 General Assembly SEI August 12 - Project 1
 
 
