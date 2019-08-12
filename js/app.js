@@ -132,7 +132,6 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
             // uses id of event  to grab second index of same array in object
             if (cQA[event.target.id][1] === true) {
                 totalPoints += pointsAmount;
-                checkToWin();
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
                 // create correct answer display
@@ -155,7 +154,6 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 document.getElementById("points").innerHTML = totalPoints;
             } else {
                 totalPoints -= pointsAmount;
-                checkToWin();
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
                 console.log(totalPoints);
@@ -176,6 +174,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 }
                 removeICAnswers();
                 document.getElementById("points").innerHTML = totalPoints;
+                checkToWin();
             }
         })
 
