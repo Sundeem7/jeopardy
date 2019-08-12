@@ -28,9 +28,9 @@ body {
     margin: 0;
     /* border-radius: 10px; */
     /* background-image: url("https://wallpaperaccess.com/full/624960.jpg"); */
-    background-image: url("../modal.jpg");
-    /* background-size: cover;
-    background-repeat: no-repeat; */
+    background-image: url("../images.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: 99999;
     color: #6cc04a;
 }
@@ -163,10 +163,10 @@ body {
 }
 
 button {
-    padding: 5px 10px;
+    padding: 25px 40px;
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
+    font-size: 40px;
     outline: none;
     color: #fff;
     background-color: #6cc04a;
@@ -215,6 +215,7 @@ p {
     position: relative;
     z-index: 999990;
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: white;
     font-weight: 900;
+    text-shadow: 1px 1px 5px #498631;
 }
