@@ -14,10 +14,24 @@ body {
     text-align: center;
 }
 
+body::after {
+    content: "";
+    background-image: url("../wallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
 .headerContainer {
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .modal {
@@ -25,7 +39,6 @@ body {
     height: 100vh;
     position: absolute;
     margin: 0;
-    /* border-radius: 10px; */
     /* background-image: url("https://wallpaperaccess.com/full/624960.jpg"); */
     background-image: url("../images.png");
     background-size: cover;
@@ -61,7 +74,6 @@ body {
     margin: 100px 425px;
     justify-content: center;
     align-items: center;
-    /* background-image: url("images.jpeg") */
 }
 
 .question {
@@ -73,7 +85,9 @@ body {
     justify-content: center;
     align-items: center;
     margin: 10px 0;
-    background-image: linear-gradient(#6cc04a, white);
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px 5px #6cc04a;
 }
 
 .answerContainer {
@@ -91,7 +105,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(white, #1f96db);
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px 5px #1f96db;
 }
 
 .categories {
@@ -103,9 +119,9 @@ body {
     font-size: 30px;
     margin: 15px;
     text-align: center;
-    text-shadow: 1px 1px 1px black;
-    color: #6cc04a;
-    background-color: white;
+    background-color: black;
+    color: white;
+    text-shadow: 1px 1px 5px #6cc04a;
 }
 
 .points {
@@ -215,10 +231,32 @@ h1 {
     z-index: 999990;
     font-family: rickAndMortyFont;
 }
+
 p {
     position: relative;
     z-index: 999990;
     color: white;
     font-weight: 900;
     text-shadow: 1px 1px 5px #498631;
+}
+
+.gameTitle {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    animation: bigAndSmall 6s infinite;
+}
+
+@keyframes bigAndSmall {
+    0% {
+        font-size: 40px;
+    }
+    50% {
+        font-size: 50px;
+        color: #6cc04a;
+        text-shadow: 1px 1px 5px black;
+    }
+    100% {
+        font-size: 40px;
+    }
 }
