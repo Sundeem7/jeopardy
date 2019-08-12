@@ -110,9 +110,9 @@ function clickQuestion() {
 clickQuestion();
 
 function getDoublePoints() {
-    let pointsIndex = document.querySelectorAll(".points"); 
-        randomIndex = Math.floor(Math.random() * pointsIndex.length);
-        console.log(randomIndex);
+    let pointsIndex = document.querySelectorAll(".points");
+    randomIndex = Math.floor(Math.random() * pointsIndex.length);
+    console.log(randomIndex);
 }
 getDoublePoints()
 
@@ -127,8 +127,6 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
         answers[i].addEventListener("click", (event) => {
 
             let pointsAmount = cQA[event.target.id][2];
-
-
             // uses id of event  to grab second index of same array in object
             if (cQA[event.target.id][1] === true) {
                 totalPoints += pointsAmount;
@@ -139,20 +137,12 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 let correctAnswer = document.createElement("div");
                 // give class = correctAnswer
                 correctAnswer.className = "correctAnswer";
-                // correct answer inner text
-                let correctText = document.createTextNode("Correct!!")
-                // give class = correctText
-                correctText.className = "correctText";
-                // text styling
-                correctText.style.position = "absolute";
-                correctText.style.zIndex = "99999000000"
-                // append text to correctAnswer
-                correctAnswer.appendChild(correctText)
                 // styling
                 correctAnswer.style.backgroundImage = "url('images/portalImage.gif')";
-                correctAnswer.style.backgroundSize = "300px 300px";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
+                // correct answer innerText
+                document.querySelector(".correctAnswer").innerHTML = "Time to get SCHWIFTY!! Add some points Morty!";
                 // remove correct Answers on click
                 let removecorrectAnswers = document.querySelector(".correctAnswer")
                 function removeCAnswers() {
@@ -170,17 +160,12 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 let incorrectAnswer = document.createElement("div");
                 // give class = correctAnswer
                 incorrectAnswer.className = "incorrectAnswer";
-                // correct answer inner text
-                let incorrectText = document.createTextNode("GREAT JOB MORTY! You just cost us points!")
-                // give class = correctText
-                incorrectText.className = "incorrectText";
-                // append text to correctAnswer
-                incorrectAnswer.appendChild(incorrectText)
                 // styling
                 incorrectAnswer.style.backgroundImage = "url('images/portalImage.gif')";
-                incorrectAnswer.style.backgroundSize = "300px 300px";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
+                // incorrect answer inner text
+                document.querySelector(".incorrectAnswer").innerHTML = "GREAT JOB MORTY! You just cost us points!";
                 // remove correct Answers on click
                 let removeincorrectAnswers = document.querySelector(".incorrectAnswer")
                 function removeICAnswers() {
@@ -190,7 +175,6 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 }
                 removeICAnswers();
                 document.getElementById("points").innerHTML = totalPoints;
-
             }
         })
 
