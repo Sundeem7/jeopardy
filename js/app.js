@@ -91,6 +91,9 @@ function clickQuestion() {
             if (questionDisplay.style.display = "none") {
                 questionDisplay.style.display = "block";
             }
+            event.target.style.backgroundColor = "gray";
+            event.target.style.color = "gray";
+            // event.target.style.backgroundColor = "black";
 
             // grabs object containing onject at the data-index to use in function called checkAnswer
             // use below to quickly reference
@@ -139,7 +142,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 correctAnswer.className = "correctAnswer";
                 // styling
                 // image sourced from https://giphy.com/explore/transparent-portal
-                correctAnswer.style.backgroundImage = "url('images/portalImage.gif')";
+                correctAnswer.style.backgroundImage = "url('portalImage.gif')";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
                 // correct answer innerText
@@ -163,7 +166,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 incorrectAnswer.className = "incorrectAnswer";
                 // styling
                 // image sourced from https://giphy.com/explore/transparent-portal
-                incorrectAnswer.style.backgroundImage = "url('images/portalImage.gif')";
+                incorrectAnswer.style.backgroundImage = "url('portalImage.gif')";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
                 // incorrect answer inner text
