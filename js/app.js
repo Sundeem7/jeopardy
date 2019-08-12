@@ -132,6 +132,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
             // uses id of event  to grab second index of same array in object
             if (cQA[event.target.id][1] === true) {
                 totalPoints += pointsAmount;
+                checkToWin();
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
                 // create correct answer display
@@ -142,7 +143,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
                 // correct answer innerText
                 document.querySelector(".correctAnswer").innerHTML = "Time to get SCHWIFTY!! Add some points Morty!";
-                
+
                 // remove correct Answers on click
                 let removecorrectAnswers = document.querySelector(".correctAnswer")
                 function removeCAnswers() {
@@ -154,6 +155,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 document.getElementById("points").innerHTML = totalPoints;
             } else {
                 totalPoints -= pointsAmount;
+                checkToWin();
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
                 console.log(totalPoints);
@@ -184,8 +186,14 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
 // ********************************************
 
 // win and lose conditions
-if (totalPoints >= 5000) {
-    console.log("you win")
-} else if (totalPoints <= -2000) {
-    console.log("try again buddy")
+function checkToWin() {
+    
+    if (totalPoints >= 5000) {
+        console.log("you win");
+        alert("CONGRATS MORTY!!");
+    } else if (totalPoints <= -2000) {
+        console.log("try again buddy");
+        alert("MORTY... JUST STOP... YOU LOST!");
+    }
 }
+checkToWin();
