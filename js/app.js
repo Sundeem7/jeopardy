@@ -108,12 +108,17 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 console.log(totalPoints);
                 // create correct answer display
                 let correctAnswer = document.createElement("div");
-                // correct answer inner text
-                let correctText = document.createTextNode("Correct!!")
-                // append text to correctAnswer
-                correctAnswer.appendChild(correctText)
                 // give class = correctAnswer
                 correctAnswer.className = "correctAnswer";
+                // correct answer inner text
+                let correctText = document.createTextNode("Correct!!")
+                // give class = correctText
+                correctText.className = "correctText";
+                // append text to correctAnswer
+                correctAnswer.appendChild(correctText)
+                // styling
+                correctAnswer.style.backgroundImage = "url('images/portalImage.gif')";
+                correctAnswer.style.backgroundSize = "300px 300px";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
                 // remove correct Answers on click
@@ -123,33 +128,41 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                         correctAnswer.parentNode.removeChild(correctAnswer);
                     })
                 }
-                // removeCAnswers();
+                removeCAnswers();
             } else {
                 totalPoints -= pointsAmount;
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
                 console.log(totalPoints);
-                // create questionDisplay for containers
+                // create correct answer display
                 let incorrectAnswer = document.createElement("div");
-                let incorrectText = document.createTextNode("Sorry, that's incorrect.")
+                // give class = correctAnswer
+                incorrectAnswer.className = "incorrectAnswer";
+                // correct answer inner text
+                let incorrectText = document.createTextNode("GREAT JOB MORTY! You just cost us points!")
+                // give class = correctText
+                incorrectText.className = "incorrectText";
+                // append text to correctAnswer
                 incorrectAnswer.appendChild(incorrectText)
-                incorrectAnswer.className = 'incorrectAnswer';
+                // styling
+                incorrectAnswer.style.backgroundImage = "url('images/portalImage.gif')";
+                incorrectAnswer.style.backgroundSize = "300px 300px";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
-                // display Questions nad answers on click
-                let removeIncorrectAnswers = document.querySelector(".incorrectAnswer")
+                // remove correct Answers on click
+                let removeincorrectAnswers = document.querySelector(".incorrectAnswer")
                 function removeICAnswers() {
-                    removeIncorrectAnswers.addEventListener("click", (event) => {
+                    removeincorrectAnswers.addEventListener("click", (event) => {
                         incorrectAnswer.parentNode.removeChild(incorrectAnswer);
                     })
                 }
-                // removeICAnswers();
+                removeICAnswers();
+                document.getElementById("points").innerHTML = totalPoints;
+
             }
-            document.getElementById("points").innerHTML = totalPoints;
-
         })
-    }
 
+    }
 }
 // checkAnswer();
 

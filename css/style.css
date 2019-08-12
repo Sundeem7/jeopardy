@@ -93,3 +93,45 @@ body {
     box-shadow: 0 1px 4px #E1E3E3, 0 0 30px #E1E3E3;
     background-color: #2EB9C9;
 }
+
+.correctAnswer {
+    width: 300px;
+    height: 300px;
+	position: absolute;
+	margin: 10% auto;
+    border-radius: 10px;
+	background-image: url(images/portalImage.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+	z-index: 99999;
+}
+
+.incorrectAnswer {
+    width: 300px;
+    height: 300px;
+	position: absolute;
+	margin: 10% auto;
+    border-radius: 10px;
+    background-image: url(images/portalImage.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+	z-index: 99999;
+}
+
+.correctText {
+    position: absolute;
+    z-index: 99999000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.incorrectText {
+    position: absolute;
+    z-index: 99999000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
