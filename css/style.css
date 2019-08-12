@@ -12,7 +12,9 @@ body {
 	position: absolute;
 	margin: 10% auto;
     border-radius: 10px;
-	background-color: black;
+    background-image: url("images/modal.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 	z-index: 99999;
 }
 

@@ -138,6 +138,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 // give class = correctAnswer
                 correctAnswer.className = "correctAnswer";
                 // styling
+                // image sourced from https://giphy.com/explore/transparent-portal
                 correctAnswer.style.backgroundImage = "url('images/portalImage.gif')";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
@@ -161,6 +162,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 // give class = correctAnswer
                 incorrectAnswer.className = "incorrectAnswer";
                 // styling
+                // image sourced from https://giphy.com/explore/transparent-portal
                 incorrectAnswer.style.backgroundImage = "url('images/portalImage.gif')";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
