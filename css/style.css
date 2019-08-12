@@ -21,15 +21,17 @@ body {
 }
 
 .modal {
-    width: 600px;
-    height: 300px;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    margin: 10% auto;
-    border-radius: 10px;
+    margin: 0;
+    /* border-radius: 10px; */
     /* background-image: url("modal.jpg"); */
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    background-color: black;
     z-index: 99999;
+    color: #6cc04a;
 }
 
 .timerContainer {
@@ -209,7 +211,7 @@ p {
     position: absolute;
     z-index: 999990;
 }
-img {
+/* img {
     position: absolute;
     z-index: 99999;
-}
+} */

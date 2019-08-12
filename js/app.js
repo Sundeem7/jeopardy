@@ -134,7 +134,6 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 totalPoints += pointsAmount;
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
-                console.log(totalPoints);
                 // create correct answer display
                 let correctAnswer = document.createElement("div");
                 // give class = correctAnswer
@@ -155,6 +154,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                     })
                 }
                 removeCAnswers();
+                document.getElementById("points").innerHTML = totalPoints;
             } else {
                 totalPoints -= pointsAmount;
                 // remove child and re-initiate clickQuestion();
