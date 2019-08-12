@@ -8,14 +8,13 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-    font-family: rickAndMortyFont;
+    font-family: 'Roboto', sans-serif;
     font-size: 40px;
     text-shadow: 1px 1px 5px white;
     text-align: center;
 }
 
 .headerContainer {
-    border: solid black;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -66,28 +65,33 @@ body {
 }
 
 .question {
+    border: solid black;
     height: 200px;
     width: 800px;
     font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 0;
+    background-image: linear-gradient(#6cc04a, white);
 }
 
 .answerContainer {
-    border: solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 .answer {
+    border: solid black;
+    margin: 0 10 px;
     height: 100px;
-    width: 200px;
+    width: 175px;
     font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(white, #1f96db);
 }
 
 .categories {
@@ -209,12 +213,11 @@ button:active {
 h1 {
     position: relative;
     z-index: 999990;
-
+    font-family: rickAndMortyFont;
 }
 p {
     position: relative;
     z-index: 999990;
-    font-family: 'Roboto', sans-serif;
     color: white;
     font-weight: 900;
     text-shadow: 1px 1px 5px #498631;
