@@ -11,7 +11,7 @@ function clickQuestion() {
         pointsQuestions[i].addEventListener("click", (event) => {
             // create questionDisplay for containers
             let questionDisplay = document.createElement("div");
-            questionDisplay.className = 'questionDisplay';
+            questionDisplay.className = "questionDisplay";
             // create div inside new div for questions
             let question = document.createElement("div");
             question.className = 'question';
@@ -106,14 +106,24 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 // remove child and re-initiate clickQuestion();
                 questionDisplay.parentNode.removeChild(questionDisplay);
                 console.log(totalPoints);
-                // create questionDisplay for containers
+                // create correct answer display
                 let correctAnswer = document.createElement("div");
+                // correct answer inner text
                 let correctText = document.createTextNode("Correct!!")
+                // append text to correctAnswer
                 correctAnswer.appendChild(correctText)
-                correctAnswer.className = 'correctAnswer';
+                // give class = correctAnswer
+                correctAnswer.className = "correctAnswer";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
-                // display Questions nad answers on click
+                // remove correct Answers on click
+                let removecorrectAnswers = document.querySelector(".correctAnswer")
+                function removeCAnswers() {
+                    removecorrectAnswers.addEventListener("click", (event) => {
+                        correctAnswer.parentNode.removeChild(correctAnswer);
+                    })
+                }
+                // removeCAnswers();
             } else {
                 totalPoints -= pointsAmount;
                 // remove child and re-initiate clickQuestion();
@@ -123,10 +133,17 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 let incorrectAnswer = document.createElement("div");
                 let incorrectText = document.createTextNode("Sorry, that's incorrect.")
                 incorrectAnswer.appendChild(incorrectText)
-                incorrectAnswer.className = 'correctanswer';
+                incorrectAnswer.className = 'incorrectAnswer';
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
                 // display Questions nad answers on click
+                let removeIncorrectAnswers = document.querySelector(".incorrectAnswer")
+                function removeICAnswers() {
+                    removeIncorrectAnswers.addEventListener("click", (event) => {
+                        incorrectAnswer.parentNode.removeChild(incorrectAnswer);
+                    })
+                }
+                // removeICAnswers();
             }
             document.getElementById("points").innerHTML = totalPoints;
 
