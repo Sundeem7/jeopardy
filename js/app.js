@@ -138,9 +138,6 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 let correctAnswer = document.createElement("div");
                 // give class = correctAnswer
                 correctAnswer.className = "correctAnswer";
-                // styling
-                // image sourced from https://giphy.com/explore/transparent-portal
-                correctAnswer.style.backgroundImage = "url('portalImage.gif')";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
                 // correct answer innerText
@@ -164,9 +161,6 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
                 let incorrectAnswer = document.createElement("div");
                 // give class = correctAnswer
                 incorrectAnswer.className = "incorrectAnswer";
-                // styling
-                // image sourced from https://giphy.com/explore/transparent-portal
-                incorrectAnswer.style.backgroundImage = "url('portalImage.gif')";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
                 // incorrect answer inner text

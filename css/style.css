@@ -1,6 +1,6 @@
 @font-face {
     font-family: rickAndMortyFont;
-    src: url(fonts/get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8.ttf);
+    src: url(../fonts/get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8.ttf);
 }
 
 body {
@@ -10,6 +10,7 @@ body {
     width: 100vw;
     font-family: rickAndMortyFont;
     font-size: 40px;
+    text-shadow: 1px 1px 5px white;
     text-align: center;
 }
 
@@ -26,10 +27,10 @@ body {
     position: absolute;
     margin: 0;
     /* border-radius: 10px; */
-    /* background-image: url("modal.jpg"); */
+    /* background-image: url("https://wallpaperaccess.com/full/624960.jpg"); */
+    background-image: url("../modal.jpg");
     /* background-size: cover;
     background-repeat: no-repeat; */
-    background-color: black;
     z-index: 99999;
     color: #6cc04a;
 }
@@ -129,7 +130,8 @@ body {
     position: absolute;
     border-radius: 10px;
     margin: 0 400px;
-    /* background-image: url("portalImage.gif"); */
+    /* image sourced from https://giphy.com/explore/transparent-portal */
+    background-image: url("../portalImage.gif");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 99999;
@@ -147,7 +149,8 @@ body {
     position: absolute;
     border-radius: 10px;
     margin: 0 400px;
-    /* background-image: url("portalImage.gif"); */
+    /* image sourced from https://giphy.com/explore/transparent-portal */
+    background-image: url("../portalImage.gif");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 99999;
@@ -204,14 +207,14 @@ button:active {
 }
 
 h1 {
-    position: absolute;
+    position: relative;
     z-index: 999990;
+
 }
 p {
-    position: absolute;
+    position: relative;
     z-index: 999990;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-weight: 900;
 }
-/* img {
-    position: absolute;
-    z-index: 99999;
-} */
