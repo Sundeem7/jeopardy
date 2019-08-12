@@ -15,7 +15,8 @@ that came with its own unique challenge of not only earning points, but also rac
 1. Click the Start Button
 2. Select a question from a category
 3. Select an answer from the choices given
-4. You will earn points if the answer chosenis correct, but will lose points if the answer is not correct
+4. You will earn points if the answer chosen is correct, but will lose points if the answer is not correct.
+5. To win you need 3000 points. You lose if you get -2000 points.
 
 
 ## Wireframe
