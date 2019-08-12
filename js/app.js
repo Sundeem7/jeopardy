@@ -187,7 +187,7 @@ function checkAnswer(cQA, questionDisplay, cQArI) {
 // win and lose conditions
 function checkToWin() {
     
-    if (totalPoints >= 5000) {
+    if (totalPoints >= 3000) {
         console.log("you win");
         alert("CONGRATS MORTY!!");
     } else if (totalPoints <= -2000) {
