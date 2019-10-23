@@ -61,6 +61,7 @@ let pointsAmount = 0;
 const clickQuestion = () => {
     // declare .points
     let pointsQuestions = document.querySelectorAll(".points");
+
     // create array for .points
     for (let i = 0; i < pointsQuestions.length; i++) {
         // add event listener to all .points
@@ -95,7 +96,8 @@ const clickQuestion = () => {
             }
             event.target.style.backgroundColor = "gray";
             event.target.style.color = "gray";
-
+            event.target.style.pointerEvents = 'none';
+            
             // grabs object containing onject at the data-index to use in function called checkAnswer
             // use below to quickly reference
             let cQA = categoryQAndA[event.target.dataset.index];
@@ -186,7 +188,9 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
 
     }
 }
-// checkAnswer();
+$('#myForm').one('submit', function() {
+    $(this).find('input[type="submit"]').attr('disabled','disabled');
+});
 
 // ********************************************
 

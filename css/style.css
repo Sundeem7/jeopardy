@@ -28,6 +28,11 @@ body::after {
     z-index: -1;
 }
 
+.mainContainer {
+    border: solid black;
+    margin: 2;
+}
+
 .headerContainer {
     height: 100px;
     display: flex;
@@ -162,6 +167,10 @@ body::after {
     box-shadow: 0 1px 4px #1f96db, 0 0 30px #1f96db;
     background-color: #6cc04a;
 }
+
+/* .points:visited {
+    pointer-events: none
+} */
 
 .correctAnswer {
     width: 800px;
