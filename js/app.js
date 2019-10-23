@@ -68,6 +68,8 @@ const clickQuestion = () => {
             // create questionDisplay for containers
             let questionDisplay = document.createElement("div");
             questionDisplay.className = "questionDisplay";
+            // give id = incorrectAnswer
+            questionDisplay.id = "questionOverlay";
             // create div inside new div for questions
             let question = document.createElement("div");
             question.className = 'question';
@@ -138,7 +140,7 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
                 let correctAnswer = document.createElement("div");
                 // give class = correctAnswer
                 correctAnswer.className = "correctAnswer";
-                // give class = overlay
+                // give id = correctOverlay
                 correctAnswer.id = "correctOverlay";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
@@ -163,7 +165,7 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
                 let incorrectAnswer = document.createElement("div");
                 // give class = correctAnswer
                 incorrectAnswer.className = "incorrectAnswer";
-                // give class = overlay
+                // give id = incorrectAnswer
                 incorrectAnswer.id = "incorrectOverlay";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
