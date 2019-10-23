@@ -16,7 +16,7 @@ startButton.addEventListener("click", (event) => {
     }
 })
 
-const timerIncrement = () => {
+function timerIncrement() {
 
     // // lose after 5 mins
     // setTimeout(timerIncrement, { alert(); }, 10000);
@@ -43,7 +43,7 @@ const timerIncrement = () => {
 }
 
 // add "0" infront of numbers <= 9
-const convertTimerDisplay = (num) => {
+function convertTimerDisplay(num) {
     if (num <= 9) {
         return ("0" + num);
     } else {
@@ -58,7 +58,7 @@ const convertTimerDisplay = (num) => {
 // Question and answer choices appear on click
 // click .points (any square with a points value) to make question appear
 let pointsAmount = 0;
-const clickQuestion = () => {
+function clickQuestion() {
     // declare .points
     let pointsQuestions = document.querySelectorAll(".points");
     // create array for .points
@@ -111,7 +111,7 @@ const clickQuestion = () => {
 
 clickQuestion();
 
-const getDoublePoints = () => {
+function getDoublePoints() {
     let pointsIndex = document.querySelectorAll(".points");
     randomIndex = Math.floor(Math.random() * pointsIndex.length);
     console.log(randomIndex);
@@ -121,7 +121,7 @@ getDoublePoints()
 
 let totalPoints = 0;
 // check if answer is correct or incorrect
-const checkAnswer = (cQA, questionDisplay, cQArI) => {
+function checkAnswer(cQA, questionDisplay, cQArI) {
     // check the box
     let answers = document.querySelectorAll(".answer");
 
@@ -139,7 +139,7 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
                 // give class = correctAnswer
                 correctAnswer.className = "correctAnswer";
                 // give class = overlay
-                correctAnswer.id = "correctOverlay";
+                correctAnswer.id = "overlay";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
                 // correct answer innerText
@@ -164,7 +164,7 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
                 // give class = correctAnswer
                 incorrectAnswer.className = "incorrectAnswer";
                 // give class = overlay
-                incorrectAnswer.id = "incorrectOverlay";
+                incorrectAnswer.id = "overlay";
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
                 // incorrect answer inner text
@@ -189,30 +189,14 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
 // ********************************************
 
 // win and lose conditions
-const checkToWin = () => {
-
+function checkToWin() {
+    
     if (totalPoints >= 3000) {
         console.log("you win");
         alert("CONGRATS MORTY!!");
-    } else if (totalPoints <= -500) {
+    } else if (totalPoints <= -2000) {
         console.log("try again buddy");
         alert("MORTY... JUST STOP... YOU LOST!");
     }
 }
 checkToWin();
-
-// const displayCorrectOverlay = () => {
-//     document.getElementById("correctOverlay").style.display = "block";
-// }
-
-// const removeCorrectOverlay = () => {
-//     document.getElementById("correctOverlay").style.display = "none";
-// }
-
-// const displayIncorrectOverlay = () => {
-//     document.getElementById("incorrectOverlay").style.display = "block";
-// }
-
-// const removeIncorrectOverlay = () => {
-//     document.getElementById("incorrectOverlay").style.display = "none";
-// }
