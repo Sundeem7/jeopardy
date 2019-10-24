@@ -172,7 +172,7 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(incorrectAnswer);
                 // incorrect answer inner text
-                document.querySelector(".incorrectAnswer").innerHTML = "GREAT JOB MORTY! You just cost us points!";
+                document.querySelector(".incorrectAnswer").innerHTML = "You just cost us points, Morty!";
                 // remove correct Answers on click
                 let removeincorrectAnswers = document.querySelector(".incorrectAnswer")
                 function removeICAnswers() {

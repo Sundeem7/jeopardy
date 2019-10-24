@@ -2,8 +2,8 @@
 General Assembly SEI August 12 - Project 1
 
 
-- Project: https://github.com/Sundeem7/jeopardy/projects/1
-- GitHub Pages: https://sundeem7.github.io/jeopardy/
+- Project: https://github.com/shawn-e-harris/jeopardy/projects/1
+- GitHub Pages: https://shawn-e-harris.github.io/jeopardy/
 
 ## Overview
 The goal of this project was to HTML, CSS, and JavaScript to create a game 
@@ -20,8 +20,8 @@ that came with its own unique challenge of not only earning points, but also rac
 
 
 ## Wireframe
-!["A Wireframe of Jeopardy"](https://github.com/Sundeem7/jeopardy/blob/master/wireFrames/Category.png)
-!["A Wireframe of Jeopardy"](https://github.com/Sundeem7/jeopardy/blob/master/wireFrames/onClick%20Q%26A.png)
+!["A Wireframe of Jeopardy"](https://github.com/shawn-e-harris/jeopardy/blob/master/wireFrames/Category.png)
+!["A Wireframe of Jeopardy"](https://github.com/shawn-e-harris/jeopardy/blob/master/wireFrames/onClick%20Q%26A.png)
 
 
 ## Technologies Used
