@@ -37,8 +37,10 @@ body::after {
     width: 100vw;
     height: 100vh;
     position: absolute;
+    display: block;
+    justify-content: center;
     margin: 0;
-    background-image: url("../images/images.png");
+    background-image: url("../images/images.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 3;
@@ -244,7 +246,7 @@ body::after {
 }
 
 button {
-    padding: 25px 40px;
+    padding: 20px 30px;
     cursor: pointer;
     text-align: center;
     font-size: 40px;
@@ -253,37 +255,36 @@ button {
     background-color: #6cc04a;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 6px #999;
+    /* box-shadow: 0 6px #999; */
     animation: clicky 1s infinite;
     position: absolute;
-    z-index: 5;
+    /* z-index: 5; */
 }
 
 button:hover {
     background-color: #498631
 }
 
-button:active {
+/* button:active {
     background-color: #498631;
     box-shadow: 0 3px #666;
     transform: translateY(4px);
-}
+} */
 
 /* Animation for Submit button */
 
 @keyframes clicky {
     0% {
         background-color: #6cc04a;
-        box-shadow: 0 6px #999;
+        box-shadow: 1px 1px 5px black, -1px 1px 5px black, 1px -1px 5px black, -1px -1px 5px black;
     }
     50% {
-        background-color: 498631;
-        box-shadow: 0 3px #666;
-        transform: translateY(4px);
+        background-color: #498631;
+        box-shadow: 1px 1px 10px black, -1px 1px 10px black, 1px -1px 10px black, -1px -1px 10px black;
     }
     100% {
         background-color: #6cc04a;
-        box-shadow: 0 6px #999;
+        box-shadow: 1px 1px 5px black, -1px 1px 5px black, 1px -1px 5px black, -1px -1px 5px black;
     }
 }
 
@@ -298,7 +299,8 @@ p {
     z-index: 5;
     color: white;
     font-weight: 900;
-    text-shadow: 1px 1px 5px #498631;
+    text-shadow: 1px 1px 10px black, -1px 1px 10px black, 1px -1px 10px black, -1px -1px 10px black;
+    padding: 0 100px;
 }
 
 .gameTitle {
