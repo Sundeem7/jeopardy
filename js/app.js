@@ -147,7 +147,7 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
                 // append questionDisplay to body
                 document.getElementsByTagName('body')[0].appendChild(correctAnswer);
                 // correct answer innerText
-                document.querySelector(".correctAnswer").innerHTML = "Time to get SCHWIFTY!! Add some points Morty!";
+                document.querySelector(".correctAnswer").innerHTML = "You actually got one right, Morty!";
 
                 // remove correct Answers on click
                 let removecorrectAnswers = document.querySelector(".correctAnswer")
@@ -188,9 +188,9 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
 
     }
 }
-$('#myForm').one('submit', function() {
-    $(this).find('input[type="submit"]').attr('disabled','disabled');
-});
+// $('#myForm').one('submit', function() {
+//     $(this).find('input[type="submit"]').attr('disabled','disabled');
+// });
 
 // ********************************************
 
@@ -205,7 +205,7 @@ const checkToWin = () => {
         alert("MORTY... JUST STOP... YOU LOST!");
     }
 }
-checkToWin();
+// checkToWin();
 
 // const displayCorrectOverlay = () => {
 //     document.getElementById("correctOverlay").style.display = "block";

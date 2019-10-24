@@ -20,8 +20,8 @@ that came with its own unique challenge of not only earning points, but also rac
 
 
 ## Wireframe
-!["A Wireframe of Jeopardy"](https://github.com/shawn-e-harris/jeopardy/blob/master/wireFrames/Category.png)
-!["A Wireframe of Jeopardy"](https://github.com/shawn-e-harris/jeopardy/blob/master/wireFrames/onClick%20Q%26A.png)
+!["A Wireframe of Jeopardy"](https://github.com/sundeem7/jeopardy/blob/master/wireFrames/Category.png)
+!["A Wireframe of Jeopardy"](https://github.com/sundeem7/jeopardy/blob/master/wireFrames/onClick%20Q%26A.png)
 
 
 ## Technologies Used

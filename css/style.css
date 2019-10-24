@@ -79,7 +79,8 @@ body::after {
 }
 
 .question {
-    border: solid black;
+    /* border: solid black; */
+    border-radius: 5px;
     height: 200px;
     width: 800px;
     font-size: 60px;
@@ -87,9 +88,10 @@ body::after {
     justify-content: center;
     align-items: center;
     margin: 150px auto;
-    background-color: black;
-    color: white;
-    text-shadow: 1px 1px 5px #6cc04a;
+    background-color: whitesmoke;
+    color: black;
+    /* text-shadow: 1px 1px 5px #6cc04a; */
+    box-shadow: 1px 1px 5px #6cc04a, -1px 1px 10px #6cc04a, 1px -1px 10px #6cc04a, -1px -1px 10px #6cc04a;
     pointer-events: none; 
 }
 
@@ -111,6 +113,8 @@ body::after {
 }
 
 .answerContainer {
+    width: 80vw;
+    margin: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -118,17 +122,18 @@ body::after {
 }
 
 .answer {
-    border: solid black;
+    /* border: solid black; */
     margin: 0 auto;
-    height: 100px;
-    width: 175px;
+    height: 125px;
+    width: 200px;
     font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    color: white;
-    text-shadow: 1px 1px 5px #1f96db;
+    background-color: white;
+    color: black;
+    /* text-shadow: 1px 1px 5px #1f96db; */
+    box-shadow: 1px 1px 5px #6cc04a, -1px 1px 10px #6cc04a, 1px -1px 10px #6cc04a, -1px -1px 10px #6cc04a;
 }
 
 .categories {
@@ -180,31 +185,33 @@ body::after {
     align-items: center;
     text-align: center;
     font-size: 40px;
-    text-shadow: 1px 1px 5px white;
+    text-shadow: 1px 1px 10px white, -1px 1px 10px white, 1px -1px 10px white, -1px -1px 10px white;
 }
 
 .incorrectAnswer {
-    /* width: 800px;
-    height: 800px;
-    position: absolute; */
-    border-radius: 10px;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* position: absolute; */
+    /* border-radius: 10px; */
     /* margin: 0 auto; */
     background-image: url("../images/portalImage.gif");
-    /* background-size: cover; */
+    background-size: cover;
     background-repeat: no-repeat;
     /* z-index: 4; */
     /* display: flex; */
-    justify-content: center;
-    align-content: center;
-    text-align: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
     font-size: 40px;
-    text-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 10px black, -1px 1px 10px black, 1px -1px 10px black, -1px -1px 10px black;
     color: red;
 }
 
 #correctOverlay {
     position: fixed; 
-    display: block; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%; 
     height: 100%; 
     top: 0;
@@ -220,7 +227,9 @@ body::after {
 
 #incorrectOverlay {
     position: fixed; 
-    display: block; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%; 
     height: 100%; 
     top: 0;
