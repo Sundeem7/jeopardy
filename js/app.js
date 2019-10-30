@@ -188,9 +188,6 @@ const checkAnswer = (cQA, questionDisplay, cQArI) => {
 
     }
 }
-// $('#myForm').one('submit', function() {
-//     $(this).find('input[type="submit"]').attr('disabled','disabled');
-// });
 
 // ********************************************
 
@@ -205,20 +202,3 @@ const checkToWin = () => {
         alert("MORTY... JUST STOP... YOU LOST!");
     }
 }
-// checkToWin();
-
-// const displayCorrectOverlay = () => {
-//     document.getElementById("correctOverlay").style.display = "block";
-// }
-
-// const removeCorrectOverlay = () => {
-//     document.getElementById("correctOverlay").style.display = "none";
-// }
-
-// const displayIncorrectOverlay = () => {
-//     document.getElementById("incorrectOverlay").style.display = "block";
-// }
-
-// const removeIncorrectOverlay = () => {
-//     document.getElementById("incorrectOverlay").style.display = "none";
-// }
